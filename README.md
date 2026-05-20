@@ -146,3 +146,4 @@ chmod +x build.sh
 - [ZomkaDEV](https://github.com/ZomkaDEV) — Russian translation
 - [@bruuhim](https://github.com/bruuhim) — Arabic translation
 - [@jaydenjcpy](https://github.com/jaydenjcpy) — Chinese (Traditional) translation
+- [@KayJann](https://github.com/KayJannOnGit) — French translation

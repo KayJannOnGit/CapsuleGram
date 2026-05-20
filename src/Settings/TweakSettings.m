@@ -983,6 +983,7 @@
                 [SCISetting staticCellWithTitle:@"N4C (@ch1tmdgus)" subtitle:SCILocalized(@"Korean translation") icon:nil],
                 [SCISetting staticCellWithTitle:@"bruuhim" subtitle:SCILocalized(@"Arabic translation") icon:nil],
                 [SCISetting staticCellWithTitle:@"jaydenjcpy" subtitle:SCILocalized(@"Chinese (Traditional) translation") icon:nil],
+                [SCISetting staticCellWithTitle:@"KayJann" subtitle:SCILocalized(@"French translation") icon:nil],
                 [SCISetting staticCellWithTitle:@"John (@erupts0)" subtitle:SCILocalized(@"Testing and feature suggestions") icon:nil],
             ]
         },
