@@ -1,8 +1,8 @@
 /*
- *  RyukGram — Localizable.strings  (English source of truth)
+ *  CapsuleGram — Localizable.strings  (English source of truth)
  *  -------------------------------------------------------------------------
  *
- *  Every user-facing string in RyukGram goes through the macro
+ *  Every user-facing string in CapsuleGram goes through the macro
  *      SCILocalized(@"English text here")
  *  in the Objective-C source. The argument is BOTH the lookup key and the
  *  English fallback, so if a translation is missing the user still sees
@@ -26,7 +26,7 @@
  *     positional specifiers (%1$@ %2$lu).
  *  4. Keep embedded quotes escaped with a backslash: \" — and newlines
  *     as \n.
- *  5. Open a pull request at https://github.com/faroukbmiled/RyukGram/pulls
+ *  5. Open a pull request at https://github.com/KayJannOnGit/CapsuleGram/pulls
  *     so we can ship the language in the next release.
  *
  *
@@ -63,10 +63,10 @@
 // and are hand-authored rather than extracted from English source.         //
 //////////////////////////////////////////////////////////////////////////////
 
-"settings.firstrun.message" = "In the future: Hold down on the three lines at the top right of your profile page, to re-open RyukGram settings.";
+"settings.firstrun.message" = "In the future: Hold down on the three lines at the top right of your profile page, to re-open CapsuleGram settings.";
 "settings.firstrun.ok" = "I understand!";
-"settings.firstrun.title" = "RyukGram Settings Info";
-"settings.language.english_only" = "RyukGram currently ships with English only. Other languages are wired up and waiting for translations — help translate into your language by following the short guide in the README.";
+"settings.firstrun.title" = "CapsuleGram Settings Info";
+"settings.language.english_only" = "CapsuleGram currently ships with English only. Other languages are wired up and waiting for translations — help translate into your language by following the short guide in the README.";
 "settings.language.help_translate" = "Help translate";
 "settings.language.ok" = "OK";
 "settings.language.system" = "System default";
@@ -75,7 +75,7 @@
 "settings.results.none" = "No results";
 "settings.results.one" = "%lu result";
 "settings.search.placeholder" = "Search settings";
-"settings.title" = "RyukGram Settings";
+"settings.title" = "CapsuleGram Settings";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 GENERAL                                  //
@@ -135,7 +135,7 @@
 "Open links in external browser" = "Open links in external browser";
 "Opens links in Safari instead of Instagram's in-app browser" = "Opens links in Safari instead of Instagram's in-app browser";
 "Privacy" = "Privacy";
-"Redacts RyukGram buttons from screenshots, screen recordings, and mirroring" = "Redacts RyukGram buttons from screenshots, screen recordings, and mirroring";
+"Redacts CapsuleGram buttons from screenshots, screen recordings, and mirroring" = "Redacts CapsuleGram buttons from screenshots, screen recordings, and mirroring";
 "Removes all ads from the Instagram app" = "Removes all ads from the Instagram app";
 "Removes igsh, utm_source, and other tracking parameters from shared links" = "Removes igsh, utm_source, and other tracking parameters from shared links";
 "Removes Instagram tracking wrappers (l.instagram.com) and UTM/fbclid params from URLs" = "Removes Instagram tracking wrappers (l.instagram.com) and UTM/fbclid params from URLs";
@@ -195,7 +195,7 @@
 
 "Action button" = "Action button";
 "Adds 'View profile picture' and 'View cover' to story tray long-press menus" = "Adds 'View profile picture' and 'View cover' to story tray long-press menus";
-"Adds a RyukGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Adds a RyukGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below.";
+"Adds a CapsuleGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Adds a CapsuleGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below.";
 "Controls when and how the feed refreshes. Background refresh occurs when returning to the app after ~10 minutes. Home button refresh occurs when tapping the Home tab while already on it." = "Controls when and how the feed refreshes. Background refresh occurs when returning to the app after ~10 minutes. Home button refresh occurs when tapping the Home tab while already on it.";
 "Default tap action" = "Default tap action";
 "Disable background refresh" = "Disable background refresh";
@@ -238,7 +238,7 @@
 // Settings → Reels tab                                                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Adds a RyukGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below.";
+"Adds a CapsuleGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Adds a CapsuleGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below.";
 "Always show progress scrubber" = "Always show progress scrubber";
 "Auto-scroll reels" = "Auto-scroll reels";
 "Change what happens when you tap on a reel" = "Change what happens when you tap on a reel";
@@ -253,7 +253,7 @@
 "Hides the top navigation bar when watching reels" = "Hides the top navigation bar when watching reels";
 "Hiding" = "Hiding";
 "IG default" = "IG default";
-"IG default: native behavior. RyukGram: re-advances after swiping back." = "IG default: native behavior. RyukGram: re-advances after swiping back.";
+"IG default: native behavior. CapsuleGram: re-advances after swiping back." = "IG default: native behavior. CapsuleGram: re-advances after swiping back.";
 "Limits" = "Limits";
 "Limits the amount of reels available to scroll at any given time, and prevents refreshing" = "Limits the amount of reels available to scroll at any given time, and prevents refreshing";
 "Only loads %@ %@" = "Only loads %@ %@";
@@ -261,7 +261,7 @@
 "Prevent doom scrolling" = "Prevent doom scrolling";
 "Prevents reels from being scrolled to the next video" = "Prevents reels from being scrolled to the next video";
 "Prevents reels from unmuting when the volume/silent button is pressed" = "Prevents reels from unmuting when the volume/silent button is pressed";
-"RyukGram" = "RyukGram";
+"CapsuleGram" = "CapsuleGram";
 "Shows an alert when you trigger a reels refresh" = "Shows an alert when you trigger a reels refresh";
 "Shows buttons to reveal and auto-fill the password on locked reels" = "Shows buttons to reveal and auto-fill the password on locked reels";
 "Tap Controls" = "Tap Controls";
@@ -306,7 +306,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 "Confirm before download" = "Confirm before download";
-"Deprecated. The RyukGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "Deprecated. The RyukGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media.";
+"Deprecated. The CapsuleGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "Deprecated. The CapsuleGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media.";
 "Downloads" = "Downloads";
 "Downloads with %@ %@" = "Downloads with %@ %@";
 "Enable long-press gesture" = "Enable long-press gesture";
@@ -317,18 +317,18 @@
 "Press finger(s) for %@ %@" = "Press finger(s) for %@ %@";
 "Route saves into a dedicated album in Photos instead of the camera roll root" = "Route saves into a dedicated album in Photos instead of the camera roll root";
 "Save action" = "Save action";
-"Save to RyukGram album" = "Save to RyukGram album";
+"Save to CapsuleGram album" = "Save to CapsuleGram album";
 "Saving" = "Saving";
 "Show a confirmation dialog before starting a download" = "Show a confirmation dialog before starting a download";
 "What happens after the gesture downloads" = "What happens after the gesture downloads";
-"When \"Save to RyukGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"RyukGram\" album in your Photos library." = "When \"Save to RyukGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"RyukGram\" album in your Photos library.";
+"When \"Save to CapsuleGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"CapsuleGram\" album in your Photos library." = "When \"Save to CapsuleGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"CapsuleGram\" album in your Photos library.";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 STORIES                                  //
 // Settings → Stories tab                                                   //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "Adds a RyukGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below.";
+"Adds a CapsuleGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "Adds a CapsuleGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below.";
 "Adds a speaker button to the story overlay to unmute/mute audio. Also available in the 3-dot menu" = "Adds a speaker button to the story overlay to unmute/mute audio. Also available in the 3-dot menu";
 "Advance on story like" = "Advance on story like";
 "Advance on story reply" = "Advance on story reply";
@@ -562,7 +562,7 @@
 "Enable tweak settings quick-access" = "Enable tweak settings quick-access";
 "Free %@ of Instagram cache. A restart is recommended." = "Free %@ of Instagram cache. A restart is recommended.";
 "Freed %@. Restart to apply." = "Freed %@. Restart to apply.";
-"Hold on the home tab to open RyukGram settings" = "Hold on the home tab to open RyukGram settings";
+"Hold on the home tab to open CapsuleGram settings" = "Hold on the home tab to open CapsuleGram settings";
 "Instagram" = "Instagram";
 "Monthly" = "Monthly";
 "Nothing to clear" = "Nothing to clear";
@@ -712,7 +712,7 @@
 "Save to Photos?" = "Save to Photos?";
 "Saved %lu items" = "Saved %lu items";
 "Saved to Photos" = "Saved to Photos";
-"Saved to RyukGram" = "Saved to RyukGram";
+"Saved to CapsuleGram" = "Saved to CapsuleGram";
 "Tap to cancel" = "Tap to cancel";
 "Unmute audio" = "Unmute audio";
 "View cover" = "View cover";
@@ -960,7 +960,7 @@
 "Existing values for the selected scope will be replaced. The app may need to restart for some changes to take effect." = "Existing values for the selected scope will be replaced. The app may need to restart for some changes to take effect.";
 "Export" = "Export";
 "File has no importable sections." = "File has no importable sections.";
-"File is not a valid RyukGram export." = "File is not a valid RyukGram export.";
+"File is not a valid CapsuleGram export." = "File is not a valid CapsuleGram export.";
 "Filter" = "Filter";
 "First scan: we collect your followers and following lists and save them locally." = "First scan: we collect your followers and following lists and save them locally.";
 "Follow %lu" = "Follow %lu";
@@ -1146,18 +1146,19 @@
 "Releases" = "Releases";
 "Report an issue" = "Report an issue";
 "Russian translation" = "Russian translation";
-"RyukGram developer" = "RyukGram developer";
-"Join Telegram channel" = "Join Telegram channel";
+"CapsuleGram developer" = "CapsuleGram developer";
+"Reddit" = "Reddit";
+"Support on Ko-fi" = "Support on Ko-fi";
 "Source code" = "Source code";
 "View on GitHub" = "View on GitHub";
 "Spanish translation" = "Spanish translation";
 "Support the original developer" = "Support the original developer";
-"Telegram channel" = "Telegram channel";
+"Reddit" = "Reddit";
 "Testing and feature suggestions" = "Testing and feature suggestions";
 "Tweak settings" = "Tweak settings";
 "Version" = "Version";
 "Version, credits, and links" = "Version, credits, and links";
-"What's new in RyukGram" = "What's new in RyukGram";
+"What's new in CapsuleGram" = "What's new in CapsuleGram";
 
 //////////////////////////////////////////////////////////////////////////////
 //                             HD DOWNLOADS                                 //

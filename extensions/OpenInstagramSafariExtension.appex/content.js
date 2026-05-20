@@ -1,5 +1,5 @@
 // Redirect instagram.com web links into the native app.
-// Shipped inside RyukGram as a Safari web extension.
+// Shipped inside CapsuleGram as a Safari web extension.
 
 (function () {
     if (window.top !== window.self) return;

@@ -61,8 +61,8 @@ static NSDictionary *sciRegisteredDefaultsRef = nil;
     }
 
     // If the user picks "Save to Photos" from the share sheet, route the new
-    // asset into the RyukGram album via a one-shot photo library observer.
-    if ([self getBoolPref:@"save_to_ryukgram_album"]) {
+    // asset into the CapsuleGram album via a one-shot photo library observer.
+    if ([self getBoolPref:@"save_to_CapsuleGram_album"]) {
         [SCIPhotoAlbum watchForNextSavedAsset];
     }
 

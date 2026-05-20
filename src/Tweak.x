@@ -16,7 +16,7 @@
 ///////////////////////////////////////////////////////////
 
 // * Tweak version *
-NSString *SCIVersionString = @"v1.2.2";
+NSString *SCIVersionString = @"v1.0.0";
 
 // Variables that work across features
 BOOL dmVisualMsgsViewedButtonEnabled = false;
@@ -108,7 +108,7 @@ BOOL dmVisualMsgsViewedButtonEnabled = false;
         @"keep_seen_visual_local": @(NO),
         @"send_audio_as_file": @(YES),
         @"download_audio_message": @(NO),
-        @"save_to_ryukgram_album": @(NO),
+        @"save_to_CapsuleGram_album": @(NO),
         @"unlock_password_reels": @(YES),
         @"seen_mode": @"button",
         @"seen_auto_on_interact": @(NO),

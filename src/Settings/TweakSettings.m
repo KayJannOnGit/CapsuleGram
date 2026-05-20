@@ -72,8 +72,8 @@
             @"header": @"",
             @"rows": @[
                 ({
-                    SCISetting *s = [SCISetting buttonCellWithTitle:@"RyukGram"
-                                                           subtitle:[NSString stringWithFormat:SCILocalized(@"%@ — GitHub & Telegram"), SCIVersionString]
+                    SCISetting *s = [SCISetting buttonCellWithTitle:@"CapsuleGram"
+                                                           subtitle:[NSString stringWithFormat:SCILocalized(@"%@ — By KayJann"), SCIVersionString]
                                                                icon:nil
                                                              action:^{
                         UIWindow *win = nil;
@@ -82,7 +82,7 @@
                         while (top.presentedViewController) top = top.presentedViewController;
                         [SCILinksSheet presentFrom:top];
                     }];
-                    s.bundleImageName = @"ryukgram";
+                    s.bundleImageName = @"CapsuleGram";
                     s.titleColor = [UIColor labelColor];
                     s;
                 })
@@ -178,7 +178,7 @@
                                         @{
                                             @"header": SCILocalized(@"Privacy"),
                                             @"rows": @[
-                                                [SCISetting switchCellWithTitle:SCILocalized(@"Hide UI on capture") subtitle:SCILocalized(@"Redacts RyukGram buttons from screenshots, screen recordings, and mirroring") defaultsKey:@"hide_ui_on_capture"],
+                                                [SCISetting switchCellWithTitle:SCILocalized(@"Hide UI on capture") subtitle:SCILocalized(@"Redacts CapsuleGram buttons from screenshots, screen recordings, and mirroring") defaultsKey:@"hide_ui_on_capture"],
                                             ]
                                         },
                                         @{
@@ -202,7 +202,7 @@
                                                icon:[SCISymbol symbolWithName:@"rectangle.stack"]
                                         navSections:@[@{
                                             @"header": SCILocalized(@"Action button"),
-                                            @"footer": SCILocalized(@"Adds a RyukGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below."),
+                                            @"footer": SCILocalized(@"Adds a CapsuleGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below."),
                                             @"rows": @[
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Show action button") subtitle:SCILocalized(@"Inserts a button row below like/comment/share on each post") defaultsKey:@"feed_action_button"],
                                                 [SCISetting menuCellWithTitle:SCILocalized(@"Default tap action") subtitle:SCILocalized(@"What happens on a single tap. Long-press always opens the full menu") menu:[self menus][@"feed_action_default"]],
@@ -249,7 +249,7 @@
                                                icon:[SCISymbol symbolWithName:@"circle.dashed"]
                                         navSections:@[@{
                                             @"header": SCILocalized(@"Action button"),
-                                            @"footer": SCILocalized(@"Adds a RyukGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below."),
+                                            @"footer": SCILocalized(@"Adds a CapsuleGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below."),
                                             @"rows": @[
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Show action button") subtitle:SCILocalized(@"Inserts a button next to the seen/eye button on story overlays") defaultsKey:@"stories_action_button" requiresRestart:YES],
                                                 [SCISetting menuCellWithTitle:SCILocalized(@"Default tap action") subtitle:SCILocalized(@"What happens on a single tap. Long-press always opens the full menu") menu:[self menus][@"stories_action_default"]],
@@ -331,7 +331,7 @@
                                                icon:[SCISymbol symbolWithName:@"film.stack"]
                                         navSections:@[@{
                                             @"header": SCILocalized(@"Action button"),
-                                            @"footer": SCILocalized(@"Adds a RyukGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below."),
+                                            @"footer": SCILocalized(@"Adds a CapsuleGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below."),
                                             @"rows": @[
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Show action button") subtitle:SCILocalized(@"Places a button above the like/comment/share column on each reel") defaultsKey:@"reels_action_button"],
                                                 [SCISetting menuCellWithTitle:SCILocalized(@"Default tap action") subtitle:SCILocalized(@"What happens on a single tap. Long-press always opens the full menu") menu:[self menus][@"reels_action_default"]],
@@ -341,7 +341,7 @@
                                             @"header": @"",
                                             @"rows": @[
                                                 [SCISetting menuCellWithTitle:SCILocalized(@"Tap Controls") subtitle:SCILocalized(@"Change what happens when you tap on a reel") menu:[self menus][@"reels_tap_control"]],
-                                                [SCISetting menuCellWithTitle:SCILocalized(@"Auto-scroll reels") subtitle:SCILocalized(@"IG default: native behavior. RyukGram: re-advances after swiping back.") menu:[self menus][@"auto_scroll_reels_mode"]],
+                                                [SCISetting menuCellWithTitle:SCILocalized(@"Auto-scroll reels") subtitle:SCILocalized(@"IG default: native behavior. CapsuleGram: re-advances after swiping back.") menu:[self menus][@"auto_scroll_reels_mode"]],
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Always show progress scrubber") subtitle:SCILocalized(@"Forces the progress bar to appear on every reel") defaultsKey:@"reels_show_scrubber"],
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Disable auto-unmuting reels") subtitle:SCILocalized(@"Prevents reels from unmuting when the volume/silent button is pressed") defaultsKey:@"disable_auto_unmuting_reels" requiresRestart:YES],
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Confirm reel refresh") subtitle:SCILocalized(@"Shows an alert when you trigger a reels refresh") defaultsKey:@"refresh_reel_confirm"],
@@ -572,16 +572,16 @@
                                                icon:[SCISymbol symbolWithName:@"tray.and.arrow.down"]
                                         navSections:@[@{
                                             @"header": SCILocalized(@"Downloads"),
-                                            @"footer": SCILocalized(@"When \"Save to RyukGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"RyukGram\" album in your Photos library."),
+                                            @"footer": SCILocalized(@"When \"Save to CapsuleGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"CapsuleGram\" album in your Photos library."),
                                             @"rows": @[
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Confirm before download") subtitle:SCILocalized(@"Show a confirmation dialog before starting a download") defaultsKey:@"dw_confirm"],
-                                                [SCISetting switchCellWithTitle:SCILocalized(@"Save to RyukGram album") subtitle:SCILocalized(@"Route saves into a dedicated album in Photos instead of the camera roll root") defaultsKey:@"save_to_ryukgram_album"]
+                                                [SCISetting switchCellWithTitle:SCILocalized(@"Save to CapsuleGram album") subtitle:SCILocalized(@"Route saves into a dedicated album in Photos instead of the camera roll root") defaultsKey:@"save_to_CapsuleGram_album"]
                                             ]
                                         },
                                         [self enhancedDownloadsSection],
                                         @{
                                             @"header": SCILocalized(@"Legacy long-press gesture"),
-                                            @"footer": SCILocalized(@"Deprecated. The RyukGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media."),
+                                            @"footer": SCILocalized(@"Deprecated. The CapsuleGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media."),
                                             @"rows": @[
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Enable long-press gesture") subtitle:SCILocalized(@"Master toggle for the deprecated gesture workflow (off by default)") defaultsKey:@"dw_legacy_gesture"],
                                                 [SCISetting menuCellWithTitle:SCILocalized(@"Save action") subtitle:SCILocalized(@"What happens after the gesture downloads") menu:[self menus][@"dw_save_action"]],
@@ -673,7 +673,7 @@
                                                icon:[SCISymbol symbolWithName:@"arrow.up.arrow.down.square"]
                                         navSections:@[@{
                                             @"header": @"",
-                                            @"footer": SCILocalized(@"Export or import RyukGram settings, excluded lists and Profile Analyzer data. Pick any combination on each page."),
+                                            @"footer": SCILocalized(@"Export or import CapsuleGram settings, excluded lists and Profile Analyzer data. Pick any combination on each page."),
                                             @"rows": @[
                                                 [SCISetting buttonCellWithTitle:SCILocalized(@"Export")
                                                                        subtitle:SCILocalized(@"Save to a JSON file")
@@ -699,7 +699,7 @@
                                         navSections:@[@{
                                             @"header": SCILocalized(@"Tweak settings"),
                                             @"rows": @[
-                                                [SCISetting switchCellWithTitle:SCILocalized(@"Enable tweak settings quick-access") subtitle:SCILocalized(@"Hold on the home tab to open RyukGram settings") defaultsKey:@"settings_shortcut" requiresRestart:YES],
+                                                [SCISetting switchCellWithTitle:SCILocalized(@"Enable tweak settings quick-access") subtitle:SCILocalized(@"Hold on the home tab to open CapsuleGram settings") defaultsKey:@"settings_shortcut" requiresRestart:YES],
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Show tweak settings on app launch") subtitle:SCILocalized(@"Automatically opens settings when the app launches") defaultsKey:@"tweak_settings_app_launch"],
                                                 [SCISetting switchCellWithTitle:SCILocalized(@"Pause playback when opening settings") subtitle:SCILocalized(@"Pauses any playing video/audio when settings opens") defaultsKey:@"settings_pause_playback"],
                                             ]
@@ -956,7 +956,7 @@
         @{
             @"header": SCILocalized(@"Version"),
             @"rows": @[
-                [self aboutVersionRowTitle:@"RyukGram" value:SCIVersionString icon:[SCISymbol symbolWithName:@"wrench.and.screwdriver.fill" color:[UIColor systemGrayColor] size:14.0]],
+                [self aboutVersionRowTitle:@"CapsuleGram" value:SCIVersionString icon:[SCISymbol symbolWithName:@"wrench.and.screwdriver.fill" color:[UIColor systemGrayColor] size:14.0]],
                 [self aboutVersionRowTitle:@"Instagram" value:[SCIUtils IGVersionString] icon:[SCISymbol symbolWithName:@"camera.fill" color:[UIColor systemGrayColor] size:14.0]],
                 [self aboutVersionRowTitle:SCILocalized(@"Bundle") value:[[NSBundle mainBundle] bundleIdentifier] icon:[SCISymbol symbolWithName:@"number" color:[UIColor systemGrayColor] size:14.0]],
             ]
@@ -964,7 +964,7 @@
         @{
             @"header": SCILocalized(@"Developers"),
             @"rows": @[
-                [SCISetting linkCellWithTitle:@"Ryuk" subtitle:SCILocalized(@"RyukGram developer") imageUrl:@"https://github.com/faroukbmiled.png" url:@"https://github.com/faroukbmiled"],
+                [SCISetting linkCellWithTitle:@"KayJannOnGit" subtitle:SCILocalized(@"CapsuleGram developer") imageUrl:@"https://github.com/KayJannOnGit.png" url:@"https://github.com/KayJannOnGit"],
                 [SCISetting linkCellWithTitle:@"darthplagueiswise (Radan)" subtitle:SCILocalized(@"Experimental features") imageUrl:@"https://github.com/darthplagueiswise.png" url:@"https://github.com/darthplagueiswise"],
                 [SCISetting linkCellWithTitle:@"SoCuul" subtitle:SCILocalized(@"Original SCInsta developer") imageUrl:@"https://i.imgur.com/c9CbytZ.png" url:@"https://github.com/SoCuul/SCInsta"],
             ]
@@ -989,10 +989,10 @@
         @{
             @"header": SCILocalized(@"Links"),
             @"rows": @[
-                [SCISetting linkCellWithTitle:SCILocalized(@"Source code") subtitle:@"" icon:nil url:@"https://github.com/faroukbmiled/RyukGram"],
-                [SCISetting linkCellWithTitle:SCILocalized(@"Report an issue") subtitle:@"" icon:nil url:@"https://github.com/faroukbmiled/RyukGram/issues"],
-                [SCISetting linkCellWithTitle:SCILocalized(@"Releases") subtitle:@"" icon:nil url:@"https://github.com/faroukbmiled/RyukGram/releases"],
-                [SCISetting linkCellWithTitle:SCILocalized(@"Telegram channel") subtitle:@"" icon:nil url:@"https://t.me/ryukgram"],
+                [SCISetting linkCellWithTitle:SCILocalized(@"Source code") subtitle:@"" icon:nil url:@"https://github.com/KayJannOnGit/CapsuleGram"],
+                [SCISetting linkCellWithTitle:SCILocalized(@"Report an issue") subtitle:@"" icon:nil url:@"https://github.com/KayJannOnGit/CapsuleGram/issues"],
+                [SCISetting linkCellWithTitle:SCILocalized(@"Releases") subtitle:@"" icon:nil url:@"https://github.com/KayJannOnGit/CapsuleGram/releases"],
+                [SCISetting linkCellWithTitle:SCILocalized(@"Reddit") subtitle:@"" icon:nil url:@"https://reddit.com/u/KayJann"],
             ]
         },
         @{
@@ -1599,7 +1599,7 @@ static void sciPresentTeenIconPicker(void) {
                            propertyList:@{@"defaultsKey": @"auto_scroll_reels_mode", @"value": @"off"}],
             [UICommand commandWithTitle:SCILocalized(@"IG default") image:nil action:@selector(menuChanged:)
                            propertyList:@{@"defaultsKey": @"auto_scroll_reels_mode", @"value": @"ig"}],
-            [UICommand commandWithTitle:SCILocalized(@"RyukGram") image:nil action:@selector(menuChanged:)
+            [UICommand commandWithTitle:SCILocalized(@"CapsuleGram") image:nil action:@selector(menuChanged:)
                            propertyList:@{@"defaultsKey": @"auto_scroll_reels_mode", @"value": @"custom"}],
         ]],
 

@@ -52,6 +52,6 @@ exp_flags/
 
 # Source packaging
 zip-src.sh
-RyukGram-src-*.zip
+CapsuleGram-src-*.zip
 *.zip
 *_diff.txt

@@ -38,7 +38,7 @@ void sciDMShareMedia(UIViewController *dmVC);
 void sciDMDownloadMedia(UIViewController *dmVC);
 void sciDMMarkCurrentAsViewed(UIViewController *dmVC);
 
-// Opens RyukGram settings on the Messages tab.
+// Opens CapsuleGram settings on the Messages tab.
 void sciOpenMessagesSettings(UIView *source);
 
 #ifdef __cplusplus

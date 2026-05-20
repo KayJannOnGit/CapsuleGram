@@ -246,7 +246,7 @@ static void hook_present(UIViewController *self, SEL _cmd, UIViewController *vc,
             }]];
         }
 
-        // GIF: save via downloader (respects RyukGram album)
+        // GIF: save via downloader (respects CapsuleGram album)
         UIImage *gifImage = sciGIFImageFromCell(cell);
         if (gifImage) {
             [alert addAction:[UIAlertAction actionWithTitle:SCILocalized(@"Save GIF")

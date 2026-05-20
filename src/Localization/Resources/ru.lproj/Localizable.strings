@@ -1,8 +1,8 @@
 /*
- *  RyukGram — Localizable.strings  (English source of truth)
+ *  CapsuleGram — Localizable.strings  (English source of truth)
  *  -------------------------------------------------------------------------
  *
- *  Every user-facing string in RyukGram goes through the macro
+ *  Every user-facing string in CapsuleGram goes through the macro
  *      SCILocalized(@"English text here")
  *  in the Objective-C source. The argument is BOTH the lookup key and the
  *  English fallback, so if a translation is missing the user still sees
@@ -26,7 +26,7 @@
  *     positional specifiers (%1$@ %2$lu).
  *  4. Keep embedded quotes escaped with a backslash: \" — and newlines
  *     as \n.
- *  5. Open a pull request at https://github.com/faroukbmiled/RyukGram/pulls
+ *  5. Open a pull request at https://github.com/KayJannOnGit/CapsuleGram/pulls
  *     so we can ship the language in the next release.
  *
  *
@@ -63,10 +63,10 @@
 // and are hand-authored rather than extracted from English source.         //
 //////////////////////////////////////////////////////////////////////////////
 
-"settings.firstrun.message" = "На будущее: удерживайте кнопку с тремя линиями в правом верхнем углу страницы профиля, чтобы снова открыть настройки RyukGram.";
+"settings.firstrun.message" = "На будущее: удерживайте кнопку с тремя линиями в правом верхнем углу страницы профиля, чтобы снова открыть настройки CapsuleGram.";
 "settings.firstrun.ok" = "Понятно!";
-"settings.firstrun.title" = "Информация о настройках RyukGram";
-"settings.language.english_only" = "Сейчас RyukGram поставляется только с английским языком. Другие языки уже подключены и ждут перевода — помочь перевести приложение на свой язык можно по короткой инструкции в README.";
+"settings.firstrun.title" = "Информация о настройках CapsuleGram";
+"settings.language.english_only" = "Сейчас CapsuleGram поставляется только с английским языком. Другие языки уже подключены и ждут перевода — помочь перевести приложение на свой язык можно по короткой инструкции в README.";
 "settings.language.help_translate" = "Помочь с переводом";
 "settings.language.ok" = "ОК";
 "settings.language.system" = "Системный язык";
@@ -75,7 +75,7 @@
 "settings.results.none" = "Нет результатов";
 "settings.results.one" = "%lu результат";
 "settings.search.placeholder" = "Поиск по настройкам";
-"settings.title" = "Настройки RyukGram";
+"settings.title" = "Настройки CapsuleGram";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 GENERAL                                  //
@@ -135,7 +135,7 @@
 "Open links in external browser" = "Открывать ссылки во внешнем браузере";
 "Opens links in Safari instead of Instagram's in-app browser" = "Открывает ссылки в Safari вместо встроенного браузера Instagram";
 "Privacy" = "Конфиденциальность";
-"Redacts RyukGram buttons from screenshots, screen recordings, and mirroring" = "Скрывает кнопки RyukGram на скриншотах, записи экрана и зеркалировании";
+"Redacts CapsuleGram buttons from screenshots, screen recordings, and mirroring" = "Скрывает кнопки CapsuleGram на скриншотах, записи экрана и зеркалировании";
 "Removes all ads from the Instagram app" = "Удаляет всю рекламу из приложения Instagram";
 "Removes igsh, utm_source, and other tracking parameters from shared links" = "Удаляет igsh, utm_source и другие параметры отслеживания из общих ссылок";
 "Removes Instagram tracking wrappers (l.instagram.com) and UTM/fbclid params from URLs" = "Удаляет обёртки отслеживания Instagram (l.instagram.com) и параметры UTM/fbclid из URL";
@@ -195,7 +195,7 @@
 
 "Action button" = "Кнопка действий";
 "Adds 'View profile picture' and 'View cover' to story tray long-press menus" = "Добавляет пункты \"Посмотреть фото профиля\" и \"Посмотреть обложку\" в меню удержания панели историй";
-"Adds a RyukGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Добавляет кнопку действий RyukGram под каждым постом в ленте с пунктами скачать/поделиться/копировать/развернуть/репост. По умолчанию нажатие открывает меню; поведение можно изменить ниже.";
+"Adds a CapsuleGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Добавляет кнопку действий CapsuleGram под каждым постом в ленте с пунктами скачать/поделиться/копировать/развернуть/репост. По умолчанию нажатие открывает меню; поведение можно изменить ниже.";
 "Controls when and how the feed refreshes. Background refresh occurs when returning to the app after ~10 minutes. Home button refresh occurs when tapping the Home tab while already on it." = "Управляет тем, когда и как обновляется лента. Фоновое обновление срабатывает при возврате в приложение примерно через 10 минут. Обновление кнопкой Home срабатывает при нажатии на вкладку Home, когда вы уже на ней.";
 "Default tap action" = "Действие по нажатию";
 "Disable background refresh" = "Отключить фоновое обновление";
@@ -238,7 +238,7 @@
 // Settings → Reels tab                                                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Добавляет кнопку действий RyukGram над боковой панелью рилса с пунктами посмотреть обложку/скачать/поделиться/копировать/развернуть/репост. По умолчанию нажатие открывает меню; поведение можно изменить ниже.";
+"Adds a CapsuleGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "Добавляет кнопку действий CapsuleGram над боковой панелью рилса с пунктами посмотреть обложку/скачать/поделиться/копировать/развернуть/репост. По умолчанию нажатие открывает меню; поведение можно изменить ниже.";
 "Always show progress scrubber" = "Всегда показывать полосу прогресса";
 "Auto-scroll reels" = "Автопрокрутка рилсов";
 "Change what happens when you tap on a reel" = "Изменить действие при нажатии на рилс";
@@ -253,7 +253,7 @@
 "Hides the top navigation bar when watching reels" = "Скрывает верхнюю панель навигации при просмотре рилсов";
 "Hiding" = "Скрытие";
 "IG default" = "IG по умолчанию";
-"IG default: native behavior. RyukGram: re-advances after swiping back." = "IG по умолчанию: стандартное поведение. RyukGram: снова продвигает вперёд после свайпа назад.";
+"IG default: native behavior. CapsuleGram: re-advances after swiping back." = "IG по умолчанию: стандартное поведение. CapsuleGram: снова продвигает вперёд после свайпа назад.";
 "Limits" = "Ограничения";
 "Limits the amount of reels available to scroll at any given time, and prevents refreshing" = "Ограничивает количество рилсов, доступных для прокрутки в любой момент, и запрещает обновление";
 "Only loads %@ %@" = "Загружает только %@ %@";
@@ -261,7 +261,7 @@
 "Prevent doom scrolling" = "Предотвратить doomscrolling";
 "Prevents reels from being scrolled to the next video" = "Не даёт прокручивать рилсы к следующему видео";
 "Prevents reels from unmuting when the volume/silent button is pressed" = "Не даёт рилсам включать звук при нажатии кнопки громкости/беззвучного режима";
-"RyukGram" = "RyukGram";
+"CapsuleGram" = "CapsuleGram";
 "Shows an alert when you trigger a reels refresh" = "Показывает предупреждение при попытке обновить рилсы";
 "Shows buttons to reveal and auto-fill the password on locked reels" = "Показывает кнопки для отображения и автозаполнения пароля на защищённых рилсах";
 "Tap Controls" = "Управление нажатием";
@@ -306,7 +306,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 "Confirm before download" = "Подтверждать перед скачиванием";
-"Deprecated. The RyukGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "Устарело. Кнопка действий RyukGram (настраивается отдельно для ленты/рилсов/историй) теперь является основным способом скачивания медиа. Включайте этот общий переключатель только если предпочитаете старый жест удержания несколькими пальцами прямо по медиа.";
+"Deprecated. The CapsuleGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "Устарело. Кнопка действий CapsuleGram (настраивается отдельно для ленты/рилсов/историй) теперь является основным способом скачивания медиа. Включайте этот общий переключатель только если предпочитаете старый жест удержания несколькими пальцами прямо по медиа.";
 "Downloads" = "Загрузки";
 "Downloads with %@ %@" = "Скачивает с %@ %@";
 "Enable long-press gesture" = "Включить жест долгого нажатия";
@@ -317,18 +317,18 @@
 "Press finger(s) for %@ %@" = "Нажмите %@ %@ пальцем(ами)";
 "Route saves into a dedicated album in Photos instead of the camera roll root" = "Сохранять в отдельный альбом в Фото вместо корня медиатеки";
 "Save action" = "Действие после сохранения";
-"Save to RyukGram album" = "Сохранять в альбом RyukGram";
+"Save to CapsuleGram album" = "Сохранять в альбом CapsuleGram";
 "Saving" = "Сохранение";
 "Show a confirmation dialog before starting a download" = "Показывать подтверждение перед началом скачивания";
 "What happens after the gesture downloads" = "Что происходит после скачивания жестом";
-"When \"Save to RyukGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"RyukGram\" album in your Photos library." = "Когда включено \"Сохранять в альбом RyukGram\", скачивания и команда \"Сохранить в Фото\" из меню \"Поделиться\" будут сохраняться в отдельный альбом \"RyukGram\" в вашей медиатеке Фото.";
+"When \"Save to CapsuleGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"CapsuleGram\" album in your Photos library." = "Когда включено \"Сохранять в альбом CapsuleGram\", скачивания и команда \"Сохранить в Фото\" из меню \"Поделиться\" будут сохраняться в отдельный альбом \"CapsuleGram\" в вашей медиатеке Фото.";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 STORIES                                  //
 // Settings → Stories tab                                                   //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "Добавляет кнопку действий RyukGram рядом с кнопкой глаза в историях с пунктами скачать/поделиться/копировать/развернуть/репост/посмотреть упоминания. По умолчанию нажатие открывает меню; поведение можно изменить ниже.";
+"Adds a CapsuleGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "Добавляет кнопку действий CapsuleGram рядом с кнопкой глаза в историях с пунктами скачать/поделиться/копировать/развернуть/репост/посмотреть упоминания. По умолчанию нажатие открывает меню; поведение можно изменить ниже.";
 "Adds a speaker button to the story overlay to unmute/mute audio. Also available in the 3-dot menu" = "Добавляет кнопку динамика на историю для включения и выключения звука. Также доступно в меню с тремя точками";
 "Advance on story like" = "Переходить дальше после лайка истории";
 "Advance on story reply" = "Переходить дальше после ответа на историю";
@@ -562,7 +562,7 @@
 "Enable tweak settings quick-access" = "Включить быстрый доступ к настройкам твика";
 "Free %@ of Instagram cache. A restart is recommended." = "Освободить %@ кэша Instagram. Рекомендуется перезапуск.";
 "Freed %@. Restart to apply." = "Освобождено %@. Перезапустите для применения.";
-"Hold on the home tab to open RyukGram settings" = "Удерживайте вкладку Home, чтобы открыть настройки RyukGram";
+"Hold on the home tab to open CapsuleGram settings" = "Удерживайте вкладку Home, чтобы открыть настройки CapsuleGram";
 "Instagram" = "Instagram";
 "Monthly" = "Ежемесячно";
 "Nothing to clear" = "Нечего очищать";
@@ -712,7 +712,7 @@
 "Save to Photos?" = "Сохранить в Фото?";
 "Saved %lu items" = "Сохранено элементов: %lu";
 "Saved to Photos" = "Сохранено в Фото";
-"Saved to RyukGram" = "Сохранено в RyukGram";
+"Saved to CapsuleGram" = "Сохранено в CapsuleGram";
 "Tap to cancel" = "Нажмите, чтобы отменить";
 "Unmute audio" = "Включить звук";
 "View cover" = "Посмотреть обложку";
@@ -960,7 +960,7 @@
 "Existing values for the selected scope will be replaced. The app may need to restart for some changes to take effect." = "Текущие значения выбранной области будут заменены. Приложение, возможно, нужно будет перезапустить, чтобы изменения вступили в силу.";
 "Export" = "Экспорт";
 "File has no importable sections." = "В файле нет секций для импорта.";
-"File is not a valid RyukGram export." = "Файл не является корректным экспортом RyukGram.";
+"File is not a valid CapsuleGram export." = "Файл не является корректным экспортом CapsuleGram.";
 "Filter" = "Фильтр";
 "First scan: we collect your followers and following lists and save them locally." = "Первый анализ: собираем ваши списки подписчиков и подписок и сохраняем их локально.";
 "Follow %lu" = "Подписаться на %lu";
@@ -1046,141 +1046,12 @@
 "Remove from list" = "Убрать из списка";
 "Remove Selected" = "Удалить выбранное";
 "Reset" = "Сбросить";
-"Saved presets are reusable. Tap a preset to make it the active location." = "Сохранённые пресеты можно использовать повторно. Нажмите на пресет, чтобы сделать его активным местоположением.";
-"Search" = "Поиск";
-"Search address or place" = "Искать адрес или место";
-"Search by name or username" = "Поиск по имени или имени пользователя";
-"Search by username or name" = "Поиск по имени пользователя или имени";
-"Select" = "Выбрать";
-"Select location on map" = "Выбрать местоположение на карте";
-"Set current location" = "Установить текущее местоположение";
-"Set keep-deleted override" = "Задать переопределение keep-deleted";
-"Settings exported" = "Настройки экспортированы";
-"Show map button" = "Показывать кнопку карты";
-"Show seconds" = "Показывать секунды";
-"Sort by" = "Сортировать по";
-"Story users" = "Пользователи историй";
-"Toggle each NSDate formatter IG uses. Different surfaces (feed, comments, stories, DMs) go through different methods — enable the ones you want the custom format applied to." = "Переключайте каждый форматтер NSDate, который использует IG. Разные разделы (лента, комментарии, истории, DM) проходят через разные методы — включите те, к которым хотите применить свой формат.";
-"Use this location" = "Использовать это местоположение";
-"User '%@' not found" = "Пользователь '%@' не найден";
-"Username (A–Z)" = "Пользователь (А–Я)";
-"When on, all CoreLocation requests inside Instagram return the location below. Toggle the map button to show or hide the quick toggle on the Friends Map view." = "Когда включено, все запросы CoreLocation внутри Instagram возвращают местоположение ниже. Переключите кнопку карты, чтобы показать или скрыть быстрый переключатель на экране Friends Map.";
-
-//////////////////////////////////////////////////////////////////////////////
-//                             REELS (FEATURES)                             //
-// Strings from Reels.                                                      //
-//////////////////////////////////////////////////////////////////////////////
-
-"Copied!" = "Скопировано!";
-"No password found" = "Пароль не найден";
-"No text field found" = "Текстовое поле не найдено";
-"Password" = "Пароль";
-"Refresh Reels?" = "Обновить рилсы?";
-
-//////////////////////////////////////////////////////////////////////////////
-//                            PROFILE (FEATURES)                            //
-// Strings from Profile.                                                    //
-//////////////////////////////////////////////////////////////////////////////
-
-"Doesn't follow you" = "Не подписан на вас";
-"Follows you" = "Подписан на вас";
-"Note copied" = "Заметка скопирована";
-
-//////////////////////////////////////////////////////////////////////////////
-//                       CONFIRM DIALOGS (IN-FEATURE)                       //
-// Strings from Confirm dialogs.                                            //
-//////////////////////////////////////////////////////////////////////////////
-
-"Unfollow?" = "Отписаться?";
-
-//////////////////////////////////////////////////////////////////////////////
-//                                   MISC                                   //
-// Anything that didn't fit a named section. Usually short labels.          //
-//////////////////////////////////////////////////////////////////////////////
-
-"720p • progressive • fastest" = "720p • прогрессивный • самый быстрый";
-"Are you sure?" = "Вы уверены?";
-"Bundle" = "Пакет";
-"Copy audio URL" = "Копировать URL аудио";
-"Copy quality info" = "Копировать информацию о качестве";
-"Copy video URL" = "Копировать URL видео";
-"Could not access reel media" = "Не удалось получить доступ к медиа рилса";
-"Could not access reel photo" = "Не удалось получить доступ к фото рилса";
-"Could not extract photo url from post" = "Не удалось извлечь URL фото из поста";
-"Could not extract photo url from reel" = "Не удалось извлечь URL фото из рилса";
-"Could not extract photo url from story" = "Не удалось извлечь URL фото из истории";
-"Could not extract video url from post" = "Не удалось извлечь URL видео из поста";
-"Could not extract video url from reel" = "Не удалось извлечь URL видео из рилса";
-"Could not extract video url from story" = "Не удалось извлечь URL видео из истории";
-"Download Quality" = "Качество загрузки";
-"Extras" = "Extras";
-"FFmpegKit Debug" = "Отладка FFmpegKit";
-"Later" = "Позже";
-"No!" = "Нет!";
-"OK" = "ОК";
-"Restart" = "Перезапустить";
-"Restart required" = "Требуется перезапуск";
-"username" = "имя пользователя";
-"Yes" = "Да";
-"You must restart the app to apply this change" = "Чтобы применить это изменение, нужно перезапустить приложение";
+"Saved presets are reusable. Tap a preset to make it the active location." = "Сохранённые пресеты можно использовать повторно. Нажмите на пресет, чтобы сделать его активным.";
 
 //////////////////////////////////////////////////////////////////////////////
 //                               ABOUT / CREDITS                            //
-// Strings from the About / Credits footer of Settings.                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"%@ — GitHub & Telegram" = "%@ — GitHub и Telegram";
-"About" = "О программе";
-"Arabic translation" = "Арабский перевод";
-"Chinese (Traditional) translation" = "Китайский (традиционный) перевод";
-"Credits" = "Благодарности";
-"Developers" = "Разработчики";
-"Donate to SoCuul" = "Поддержать SoCuul";
-"installed" = "установлено";
-"Korean translation" = "Корейский перевод";
-"latest" = "последняя";
-"Links" = "Ссылки";
-"No releases" = "Нет выпусков";
-"Original SCInsta developer" = "Оригинальный разработчик SCInsta";
-"Release notes" = "Примечания к выпуску";
-"Releases" = "Выпуски";
-"Report an issue" = "Сообщить о проблеме";
-"Russian translation" = "Русский перевод";
-"RyukGram developer" = "Разработчик RyukGram";
-"Join Telegram channel" = "Присоединиться к Telegram-каналу";
-"View on GitHub" = "Открыть на GitHub";
-"Source code" = "Исходный код";
-"Spanish translation" = "Испанский перевод";
-"Support the original developer" = "Поддержать оригинального разработчика";
-"Telegram channel" = "Telegram-канал";
-"Testing and feature suggestions" = "Тестирование и предложения функций";
-"Tweak settings" = "Настройки твика";
-"Version" = "Версия";
-"Version, credits, and links" = "Версия, благодарности и ссылки";
-"What's new in RyukGram" = "Что нового в RyukGram";
-
-//////////////////////////////////////////////////////////////////////////////
-//                             HD DOWNLOADS                                 //
-// Enhanced / HD downloads settings (DASH + FFmpegKit encoding).            //
-//////////////////////////////////////////////////////////////////////////////
-
-"720p • progressive • silent" = "720p • прогрессивный • без звука";
-"Audio extract failed" = "Не удалось извлечь аудио";
-"Audio only" = "Только аудио";
-"Audio ready" = "Аудио готово";
-"Download video at the highest available quality" = "Скачивать видео в максимально доступном качестве";
-"Downloads HD video via DASH streams and encodes to H.264. Requires FFmpegKit." = "Скачивает HD-видео через DASH-потоки и кодирует в H.264. Требуется FFmpegKit.";
-"Encoding speed" = "Скорость кодирования";
-"Enhanced downloads" = "Расширенные загрузки";
-"Faster = lower quality" = "Быстрее = ниже качество";
-"FFmpeg not available" = "FFmpeg недоступен";
-"FFmpegKit is not available. Install the sideloaded IPA or the _ffmpeg .deb variant to enable." = "FFmpegKit недоступен. Сайдлоуните IPA или установите файл .deb с _ffmpeg, чтобы включить эту функцию.";
-"No audio stream available" = "Аудиопоток недоступен";
-"No audio track found" = "Аудиодорожка не найдена";
-"Photo" = "Фото";
-"Photo quality" = "Качество фото";
-"Raw image (no audio, no video)" = "Исходное изображение (без аудио и видео)";
-"silent" = "без звука";
-"Use highest resolution available" = "Использовать максимально доступное разрешение";
-"Video quality" = "Качество видео";
-"Which quality to download" = "Какое качество скачивать";
+"%@ — GitHub & Reddit" = "%@ — GitHub & Reddit";
+"Reddit" = "Reddit";
+"Support on Ko-fi" = "Поддержать на Ko-fi";

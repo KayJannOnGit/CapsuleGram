@@ -1,4 +1,4 @@
-// SCIActionButton — wires a UIButton to the RyukGram action menu system.
+// SCIActionButton — wires a UIButton to the CapsuleGram action menu system.
 // Tap fires the default action; long-press opens the full context menu.
 
 #import <UIKit/UIKit.h>
@@ -15,7 +15,7 @@ typedef id _Nullable (^SCIActionMediaProvider)(UIView *sourceView);
 /// or UIMenu dismisses. Used by stories to resume playback.
 extern const void *kSCIDismissKey;
 
-/// Configure an existing UIButton with RyukGram action-menu behavior.
+/// Configure an existing UIButton with CapsuleGram action-menu behavior.
 ///
 /// `prefKey` is the NSUserDefaults key storing the default-tap choice
 /// (one of `menu`, `expand`, `download_share`, `download_photos`).

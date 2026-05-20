@@ -15,7 +15,7 @@ fi
 CMAKE_OSX_ARCHITECTURES="arm64e;arm64"
 CMAKE_OSX_SYSROOT="iphoneos"
 
-# Copy Localization resources (*.lproj) into a RyukGram.bundle.
+# Copy Localization resources (*.lproj) into a CapsuleGram.bundle.
 # Arg 1: destination bundle directory (created if missing).
 copy_localization_into_bundle() {
     local DEST="$1"
@@ -28,7 +28,7 @@ copy_localization_into_bundle() {
     done
 }
 
-# Copy generic static assets (PNGs, etc.) into a RyukGram.bundle. Used for
+# Copy generic static assets (PNGs, etc.) into a CapsuleGram.bundle. Used for
 # bundled images the tweak loads via SCILocalizationBundle().
 # Arg 1: destination bundle directory (created if missing).
 copy_bundle_assets() {
@@ -51,23 +51,23 @@ ffmpegkit_frameworks() {
     echo "$fws"
 }
 
-# Inject RyukGram.bundle into a .deb:
+# Inject CapsuleGram.bundle into a .deb:
 # - Always: localization lproj resources.
 # - Optional: FFmpegKit frameworks (renamed *_sci to avoid collisions).
-# Path: Library/Application Support/RyukGram.bundle/ — jailbreak dlopens by full
+# Path: Library/Application Support/CapsuleGram.bundle/ — jailbreak dlopens by full
 # path, Feather copies .bundle without injecting load commands for sideload.
 # Arg 1: path to .deb (cwd must be packages/)
 inject_bundle_into_deb() {
     local BASE_DEB="$1"
     local TMPDIR=$(mktemp -d)
     dpkg-deb -R "$BASE_DEB" "$TMPDIR"
-    local DYLIB_DIR=$(find "$TMPDIR" -name "RyukGram.dylib" -exec dirname {} \; | head -1)
+    local DYLIB_DIR=$(find "$TMPDIR" -name "CapsuleGram.dylib" -exec dirname {} \; | head -1)
     [ -n "$DYLIB_DIR" ] || { rm -rf "$TMPDIR"; return; }
 
     local PREFIX=""
     [[ "$DYLIB_DIR" == *"/var/jb/"* ]] && PREFIX="var/jb/"
 
-    local BUNDLE_DIR="$TMPDIR/${PREFIX}Library/Application Support/RyukGram.bundle"
+    local BUNDLE_DIR="$TMPDIR/${PREFIX}Library/Application Support/CapsuleGram.bundle"
     mkdir -p "$BUNDLE_DIR"
     ( cd .. && copy_localization_into_bundle "$BUNDLE_DIR" && copy_bundle_assets "$BUNDLE_DIR" )
 
@@ -152,18 +152,18 @@ then
         rm -rf .theos
     fi
 
-    echo -e '\033[1m\033[32mBuilding RyukGram dylib\033[0m'
+    echo -e '\033[1m\033[32mBuilding CapsuleGram dylib\033[0m'
 
     make
 
     mkdir -p packages
-    cp .theos/obj/debug/RyukGram.dylib packages/RyukGram.dylib
+    cp .theos/obj/debug/CapsuleGram.dylib packages/CapsuleGram.dylib
 
     # Ship localization bundle next to the dylib so Feather/manual installs work.
-    copy_localization_into_bundle "packages/RyukGram.bundle"
-    copy_bundle_assets "packages/RyukGram.bundle"
+    copy_localization_into_bundle "packages/CapsuleGram.bundle"
+    copy_bundle_assets "packages/CapsuleGram.bundle"
 
-    echo -e "\033[1m\033[32mDone!\033[0m\n\nDylib at: $(pwd)/packages/RyukGram.dylib\nBundle at: $(pwd)/packages/RyukGram.bundle"
+    echo -e "\033[1m\033[32mDone!\033[0m\n\nDylib at: $(pwd)/packages/CapsuleGram.dylib\nBundle at: $(pwd)/packages/CapsuleGram.bundle"
 
 # Build sideloaded IPA
 elif [ "$1" == "sideload" ];
@@ -223,7 +223,7 @@ then
 
     # Check for decrypted Instagram IPA
     mkdir -p packages
-    ipaFile="$(find ./packages/ -maxdepth 1 -type f \( -iname '*com.burbn.instagram*.ipa' -o -iname 'Instagram*.ipa' -o -iname '[0-9]*.ipa' \) ! -iname 'RyukGram*.ipa' -exec basename {} \; 2>/dev/null | head -1)"
+    ipaFile="$(find ./packages/ -maxdepth 1 -type f \( -iname '*com.burbn.instagram*.ipa' -o -iname 'Instagram*.ipa' -o -iname '[0-9]*.ipa' \) ! -iname 'CapsuleGram*.ipa' -exec basename {} \; 2>/dev/null | head -1)"
     if [ -z "${ipaFile}" ]; then
         # Auto-move any Instagram IPA from cwd into packages/
         cwdIpa="$(find . -maxdepth 1 -type f \( -iname '*com.burbn.instagram*.ipa' -o -iname 'Instagram*.ipa' -o -iname '[0-9]*.ipa' \) 2>/dev/null | head -1)"
@@ -255,7 +255,7 @@ then
         fi
     fi
 
-    echo -e '\033[1m\033[32mBuilding RyukGram tweak for sideloading (as IPA)\033[0m'
+    echo -e '\033[1m\033[32mBuilding CapsuleGram tweak for sideloading (as IPA)\033[0m'
 
     make $MAKEARGS
 
@@ -265,7 +265,7 @@ then
 
     # Copy dylib to packages
     mkdir -p packages
-    cp .theos/obj/debug/RyukGram.dylib packages/RyukGram.dylib
+    cp .theos/obj/debug/CapsuleGram.dylib packages/CapsuleGram.dylib
 
     # Only build libs (for future use in dev build mode)
     if [ "$2" == "--buildonly" ];
@@ -273,14 +273,14 @@ then
         exit
     fi
 
-    # Build RyukGram.bundle with renamed frameworks for cyan injection
-    BUNDLE_PATH="packages/RyukGram.bundle"
+    # Build CapsuleGram.bundle with renamed frameworks for cyan injection
+    BUNDLE_PATH="packages/CapsuleGram.bundle"
     rm -rf "$BUNDLE_PATH"
     mkdir -p "$BUNDLE_PATH"
     copy_localization_into_bundle "$BUNDLE_PATH"
     copy_bundle_assets "$BUNDLE_PATH"
     if [ -d "modules/ffmpegkit/ffmpegkit.framework" ]; then
-        echo -e '\033[1m\033[32mBuilding RyukGram.bundle\033[0m'
+        echo -e '\033[1m\033[32mBuilding CapsuleGram.bundle\033[0m'
         for fw in modules/ffmpegkit/*.framework; do
             cp -R "$fw" "$BUNDLE_PATH/"
         done
@@ -305,16 +305,16 @@ then
             "$BUNDLE_PATH/ffmpegkit.framework/ffmpegkit" 2>/dev/null || true
     fi
 
-    TWEAKPATH=".theos/obj/debug/RyukGram.dylib"
+    TWEAKPATH=".theos/obj/debug/CapsuleGram.dylib"
     if [ "$2" == "--devquick" ]; then TWEAKPATH=""; fi
 
     BUNDLE_ARG=""
     [ -d "$BUNDLE_PATH" ] && BUNDLE_ARG="$BUNDLE_PATH"
 
-    # Create IPA: cyan injects dylib + copies RyukGram.bundle to app root
+    # Create IPA: cyan injects dylib + copies CapsuleGram.bundle to app root
     echo -e '\033[1m\033[32mCreating the IPA file...\033[0m'
-    rm -f packages/RyukGram-sideloaded.ipa
-    cyan -i "packages/${ipaFile}" -o packages/RyukGram-sideloaded.ipa -f $TWEAKPATH $FLEXPATH $BUNDLE_ARG -c $COMPRESSION -m 15.0 -du
+    rm -f packages/CapsuleGram-sideloaded.ipa
+    cyan -i "packages/${ipaFile}" -o packages/CapsuleGram-sideloaded.ipa -f $TWEAKPATH $FLEXPATH $BUNDLE_ARG -c $COMPRESSION -m 15.0 -du
 
     # Inject Safari "Open in Instagram" extension into Payload/*.app/PlugIns/
     # before ipapatch re-signs, so instagram.com links open the app.
@@ -322,21 +322,21 @@ then
     if [ -d "$APPEX_SRC" ]; then
         echo -e '\033[1m\033[32mEmbedding Safari extension\033[0m'
         INJECT_TMP=$(mktemp -d)
-        unzip -q packages/RyukGram-sideloaded.ipa -d "$INJECT_TMP"
+        unzip -q packages/CapsuleGram-sideloaded.ipa -d "$INJECT_TMP"
         APP_DIR="$(find "$INJECT_TMP/Payload" -maxdepth 1 -type d -name '*.app' | head -1)"
         if [ -n "$APP_DIR" ]; then
             mkdir -p "$APP_DIR/PlugIns"
             rm -rf "$APP_DIR/PlugIns/OpenInstagramSafariExtension.appex"
             cp -R "$APPEX_SRC" "$APP_DIR/PlugIns/"
             ( cd "$INJECT_TMP" && zip -qr -${COMPRESSION} ../repacked.ipa Payload )
-            mv "$INJECT_TMP/../repacked.ipa" packages/RyukGram-sideloaded.ipa
+            mv "$INJECT_TMP/../repacked.ipa" packages/CapsuleGram-sideloaded.ipa
         fi
         rm -rf "$INJECT_TMP"
     fi
 
-    run_ipapatch packages/RyukGram-sideloaded.ipa
+    run_ipapatch packages/CapsuleGram-sideloaded.ipa
 
-    echo -e "\033[1m\033[32mDone, enjoy RyukGram!\033[0m\n\nYou can find the ipa file at: $(pwd)/packages"
+    echo -e "\033[1m\033[32mDone, enjoy CapsuleGram!\033[0m\n\nYou can find the ipa file at: $(pwd)/packages"
 
 # Build rootless .deb with FFmpegKit
 elif [ "$1" == "rootless" ];
@@ -345,12 +345,12 @@ then
     make clean 2>/dev/null || true
     rm -rf .theos
 
-    echo -e '\033[1m\033[32mBuilding RyukGram tweak for rootless\033[0m'
+    echo -e '\033[1m\033[32mBuilding CapsuleGram tweak for rootless\033[0m'
 
     export THEOS_PACKAGE_SCHEME=rootless
     make package
 
-    echo -e '\033[1m\033[32mInjecting RyukGram.bundle (localization + FFmpegKit) into deb\033[0m'
+    echo -e '\033[1m\033[32mInjecting CapsuleGram.bundle (localization + FFmpegKit) into deb\033[0m'
     cd packages
     BASE_DEB="$(ls -t *.deb | head -n1)"
     if [ -n "$BASE_DEB" ]; then
@@ -361,7 +361,7 @@ then
     cd ..
     [ -d "modules/ffmpegkit/ffmpegkit.framework" ] || echo -e '\033[0;33mFFmpegKit not found — deb built without FFmpegKit.\033[0m'
 
-    echo -e "\033[1m\033[32mDone, enjoy RyukGram!\033[0m\n\nYou can find the deb file at: $(pwd)/packages"
+    echo -e "\033[1m\033[32mDone, enjoy CapsuleGram!\033[0m\n\nYou can find the deb file at: $(pwd)/packages"
 
 # Build rootful .deb with FFmpegKit
 elif [ "$1" == "rootful" ];
@@ -370,12 +370,12 @@ then
     make clean 2>/dev/null || true
     rm -rf .theos
 
-    echo -e '\033[1m\033[32mBuilding RyukGram tweak for rootful\033[0m'
+    echo -e '\033[1m\033[32mBuilding CapsuleGram tweak for rootful\033[0m'
 
     unset THEOS_PACKAGE_SCHEME
     make package
 
-    echo -e '\033[1m\033[32mInjecting RyukGram.bundle (localization + FFmpegKit) into deb\033[0m'
+    echo -e '\033[1m\033[32mInjecting CapsuleGram.bundle (localization + FFmpegKit) into deb\033[0m'
     cd packages
     BASE_DEB="$(ls -t *.deb | head -n1)"
     if [ -n "$BASE_DEB" ]; then
@@ -386,7 +386,7 @@ then
     cd ..
     [ -d "modules/ffmpegkit/ffmpegkit.framework" ] || echo -e '\033[0;33mFFmpegKit not found — deb built without FFmpegKit.\033[0m'
 
-    echo -e "\033[1m\033[32mDone, enjoy RyukGram!\033[0m\n\nYou can find the deb file at: $(pwd)/packages"
+    echo -e "\033[1m\033[32mDone, enjoy CapsuleGram!\033[0m\n\nYou can find the deb file at: $(pwd)/packages"
 
 # TrollStore build — .tipa is a renamed .ipa. Skip sideload re-sign; TS signs on-device.
 elif [ "$1" == "trollstore" ];
@@ -410,7 +410,7 @@ then
     rm -rf .theos
 
     mkdir -p packages
-    ipaFile="$(find ./packages/ -maxdepth 1 -type f \( -iname '*com.burbn.instagram*.ipa' -o -iname 'Instagram*.ipa' -o -iname '[0-9]*.ipa' \) ! -iname 'RyukGram*.ipa' -exec basename {} \; 2>/dev/null | head -1)"
+    ipaFile="$(find ./packages/ -maxdepth 1 -type f \( -iname '*com.burbn.instagram*.ipa' -o -iname 'Instagram*.ipa' -o -iname '[0-9]*.ipa' \) ! -iname 'CapsuleGram*.ipa' -exec basename {} \; 2>/dev/null | head -1)"
     if [ -z "${ipaFile}" ]; then
         cwdIpa="$(find . -maxdepth 1 -type f \( -iname '*com.burbn.instagram*.ipa' -o -iname 'Instagram*.ipa' -o -iname '[0-9]*.ipa' \) 2>/dev/null | head -1)"
         if [ -n "$cwdIpa" ]; then
@@ -434,14 +434,14 @@ then
         exit 1
     fi
 
-    echo -e '\033[1m\033[32mBuilding RyukGram tweak for TrollStore (.tipa)\033[0m'
+    echo -e '\033[1m\033[32mBuilding CapsuleGram tweak for TrollStore (.tipa)\033[0m'
     make $MAKEARGS
-    cp .theos/obj/debug/RyukGram.dylib packages/RyukGram.dylib
+    cp .theos/obj/debug/CapsuleGram.dylib packages/CapsuleGram.dylib
 
     echo -e '\033[1m\033[32mBuilding zxPluginsInject.dylib\033[0m'
     build_zxpi_dylib
 
-    BUNDLE_PATH="packages/RyukGram.bundle"
+    BUNDLE_PATH="packages/CapsuleGram.bundle"
     rm -rf "$BUNDLE_PATH"
     mkdir -p "$BUNDLE_PATH"
     copy_localization_into_bundle "$BUNDLE_PATH"
@@ -471,39 +471,39 @@ then
             "$BUNDLE_PATH/ffmpegkit.framework/ffmpegkit" 2>/dev/null || true
     fi
 
-    TWEAKPATH=".theos/obj/debug/RyukGram.dylib"
+    TWEAKPATH=".theos/obj/debug/CapsuleGram.dylib"
     BUNDLE_ARG=""
     [ -d "$BUNDLE_PATH" ] && BUNDLE_ARG="$BUNDLE_PATH"
 
     echo -e '\033[1m\033[32mCreating the TIPA file...\033[0m'
-    rm -f packages/RyukGram-trollstore.tipa packages/RyukGram-trollstore.ipa
-    cyan -i "packages/${ipaFile}" -o packages/RyukGram-trollstore.ipa -f $TWEAKPATH $FLEXPATH $BUNDLE_ARG -c $COMPRESSION -m 15.0 -du
+    rm -f packages/CapsuleGram-trollstore.tipa packages/CapsuleGram-trollstore.ipa
+    cyan -i "packages/${ipaFile}" -o packages/CapsuleGram-trollstore.ipa -f $TWEAKPATH $FLEXPATH $BUNDLE_ARG -c $COMPRESSION -m 15.0 -du
 
     # Embed Safari extension.
     APPEX_SRC="extensions/OpenInstagramSafariExtension.appex"
     if [ -d "$APPEX_SRC" ]; then
         echo -e '\033[1m\033[32mEmbedding Safari extension\033[0m'
         INJECT_TMP=$(mktemp -d)
-        unzip -q packages/RyukGram-trollstore.ipa -d "$INJECT_TMP"
+        unzip -q packages/CapsuleGram-trollstore.ipa -d "$INJECT_TMP"
         APP_DIR="$(find "$INJECT_TMP/Payload" -maxdepth 1 -type d -name '*.app' | head -1)"
         if [ -n "$APP_DIR" ]; then
             mkdir -p "$APP_DIR/PlugIns"
             rm -rf "$APP_DIR/PlugIns/OpenInstagramSafariExtension.appex"
             cp -R "$APPEX_SRC" "$APP_DIR/PlugIns/"
             ( cd "$INJECT_TMP" && zip -qr -${COMPRESSION} ../repacked.ipa Payload )
-            mv "$INJECT_TMP/../repacked.ipa" packages/RyukGram-trollstore.ipa
+            mv "$INJECT_TMP/../repacked.ipa" packages/CapsuleGram-trollstore.ipa
         fi
         rm -rf "$INJECT_TMP"
     fi
 
-    run_ipapatch packages/RyukGram-trollstore.ipa
+    run_ipapatch packages/CapsuleGram-trollstore.ipa
 
-    mv packages/RyukGram-trollstore.ipa packages/RyukGram-trollstore.tipa
-    echo -e "\033[1m\033[32mDone!\033[0m\n\nTIPA at: $(pwd)/packages/RyukGram-trollstore.tipa"
+    mv packages/CapsuleGram-trollstore.ipa packages/CapsuleGram-trollstore.tipa
+    echo -e "\033[1m\033[32mDone!\033[0m\n\nTIPA at: $(pwd)/packages/CapsuleGram-trollstore.tipa"
 
 else
     echo '+----------------------+'
-    echo '|RyukGram Build Script |'
+    echo '|CapsuleGram Build Script |'
     echo '+----------------------+'
     echo
     echo 'Usage: ./build.sh <dylib/sideload/trollstore/rootless/rootful>'

@@ -34,7 +34,7 @@
 - (UIImage *)image {
     UIImage *symbol = [UIImage systemImageNamed:self.name];
 
-    // Fallback to PNGs in RyukGram.bundle, template-rendered so the cell's
+    // Fallback to PNGs in CapsuleGram.bundle, template-rendered so the cell's
     // tintColor recolors them the same way SF Symbols get tinted.
     if (!symbol) {
         NSBundle *resource = SCILocalizationBundle();

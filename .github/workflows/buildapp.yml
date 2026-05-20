@@ -1,4 +1,4 @@
-name: Build and Package RyukGram
+name: Build and Package CapsuleGram
 
 on:
     workflow_dispatch:
@@ -24,7 +24,7 @@ concurrency:
     cancel-in-progress: true
 jobs:
     build:
-        name: Build RyukGram
+        name: Build CapsuleGram
         runs-on: macos-latest
         permissions:
             contents: write
@@ -109,24 +109,24 @@ jobs:
               run: |
                 cd main/packages
                 IPA=$(ls -t *.ipa | grep -iv instagram | head -n1)
-                [ -n "$IPA" ] && mv "$IPA" "RyukGram_sideloaded_v${VERSION}.ipa"
+                [ -n "$IPA" ] && mv "$IPA" "CapsuleGram_sideloaded_v${VERSION}.ipa"
 
             - name: Duplicate as .tipa
               if: ${{ inputs.build_tipa }}
               run: |
                 cd main/packages
-                cp "RyukGram_sideloaded_v${VERSION}.ipa" "RyukGram_trollstore_v${VERSION}.tipa"
+                cp "CapsuleGram_sideloaded_v${VERSION}.ipa" "CapsuleGram_trollstore_v${VERSION}.tipa"
 
             - name: Pass package name to upload action
               id: package_name
               run: |
-                echo "package=$(ls -t main/packages/RyukGram_sideloaded_v*.ipa | head -n1 | xargs basename)" >> "$GITHUB_OUTPUT"
+                echo "package=$(ls -t main/packages/CapsuleGram_sideloaded_v*.ipa | head -n1 | xargs basename)" >> "$GITHUB_OUTPUT"
 
             - name: Upload IPA Artifact
               if: ${{ inputs.upload_artifact }}
               uses: actions/upload-artifact@v4
               with:
-                name: RyukGram_sideloaded_v${{ steps.version.outputs.version }}
+                name: CapsuleGram_sideloaded_v${{ steps.version.outputs.version }}
                 path: ${{ github.workspace }}/main/packages/${{ steps.package_name.outputs.package }}
                 if-no-files-found: error
 
@@ -134,17 +134,17 @@ jobs:
               if: ${{ inputs.upload_artifact && inputs.build_tipa }}
               uses: actions/upload-artifact@v4
               with:
-                name: RyukGram_trollstore_v${{ steps.version.outputs.version }}
-                path: ${{ github.workspace }}/main/packages/RyukGram_trollstore_v*.tipa
+                name: CapsuleGram_trollstore_v${{ steps.version.outputs.version }}
+                path: ${{ github.workspace }}/main/packages/CapsuleGram_trollstore_v*.tipa
                 if-no-files-found: error
 
             - name: Create Release
               uses: softprops/action-gh-release@v2.0.6
               with:
-                name: RyukGram_sideloaded_v${{ steps.version.outputs.version }}
+                name: CapsuleGram_sideloaded_v${{ steps.version.outputs.version }}
                 files: |
-                    ${{ github.workspace }}/main/packages/RyukGram_sideloaded_v*.ipa
-                    ${{ github.workspace }}/main/packages/RyukGram_trollstore_v*.tipa
+                    ${{ github.workspace }}/main/packages/CapsuleGram_sideloaded_v*.ipa
+                    ${{ github.workspace }}/main/packages/CapsuleGram_trollstore_v*.tipa
                 draft: true
 
             - name: Output Release URL

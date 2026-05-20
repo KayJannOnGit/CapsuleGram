@@ -113,8 +113,8 @@ static void sciShowUnsupportedAlert(NSURL *url, NSString *reason, UIViewControll
         @"iOS audio APIs couldn't process this file%@%@\n\n"
          "You can try sending it to Instagram as-is — IG's server may accept it "
          "(e.g. Opus/Ogg from web users), or it may silently fail.\n\n"
-         "If you'd like RyukGram to support this format natively, open an issue:\n"
-         "https://github.com/faroukbmiled/RyukGram/issues",
+         "If you'd like CapsuleGram to support this format natively, open an issue:\n"
+         "https://github.com/KayJannOnGit/CapsuleGram/issues",
         reason.length > 0 ? @":\n" : @".",
         reason.length > 0 ? reason : @""];
 
@@ -127,7 +127,7 @@ static void sciShowUnsupportedAlert(NSURL *url, NSString *reason, UIViewControll
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:SCILocalized(@"Open GitHub") style:UIAlertActionStyleDefault handler:^(UIAlertAction *a) {
         [[UIApplication sharedApplication]
-            openURL:[NSURL URLWithString:@"https://github.com/faroukbmiled/RyukGram/issues"]
+            openURL:[NSURL URLWithString:@"https://github.com/KayJannOnGit/CapsuleGram/issues"]
             options:@{} completionHandler:nil];
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];

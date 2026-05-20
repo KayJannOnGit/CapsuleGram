@@ -20,7 +20,7 @@ static dispatch_queue_t sciCancelQueue(void) {
     static dispatch_queue_t q;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
-        q = dispatch_queue_create("com.ryuk.scinsta.ffmpeg.cancel", DISPATCH_QUEUE_SERIAL);
+        q = dispatch_queue_create("com.capsulegram.ffmpeg.cancel", DISPATCH_QUEUE_SERIAL);
         sciActiveURLSessions = [NSHashTable weakObjectsHashTable];
     });
     return q;
@@ -61,14 +61,14 @@ static void sciLoadFFmpegKit(void) {
 
     NSMutableArray *paths = [NSMutableArray arrayWithArray:@[
         // Sideload (Feather): .bundle copied to app root
-        [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"RyukGram.bundle/ffmpegkit.framework/ffmpegkit"],
+        [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"CapsuleGram.bundle/ffmpegkit.framework/ffmpegkit"],
         // Sideload (cyan): injected into Frameworks/
         [[[NSBundle mainBundle] privateFrameworksPath] stringByAppendingPathComponent:@"ffmpegkit.framework/ffmpegkit"],
         // Jailbreak rootless
-        @"/var/jb/Library/Application Support/RyukGram.bundle/ffmpegkit.framework/ffmpegkit",
+        @"/var/jb/Library/Application Support/CapsuleGram.bundle/ffmpegkit.framework/ffmpegkit",
         @"/var/jb/Library/MobileSubstrate/DynamicLibraries/ffmpegkit.framework/ffmpegkit",
         // Jailbreak rootful
-        @"/Library/Application Support/RyukGram.bundle/ffmpegkit.framework/ffmpegkit",
+        @"/Library/Application Support/CapsuleGram.bundle/ffmpegkit.framework/ffmpegkit",
         @"/Library/MobileSubstrate/DynamicLibraries/ffmpegkit.framework/ffmpegkit",
     ]];
 
@@ -129,13 +129,13 @@ static void sciLoadFFmpegKit(void) {
             NSArray *rootContents = [fm2 contentsOfDirectoryAtPath:bundlePath error:nil];
             [msg appendString:@"\nApp bundle root:\n"];
             for (NSString *item in rootContents)
-                if ([item containsString:@"RyukGram"] || [item containsString:@"ffmpeg"] || [item containsString:@".bundle"])
+                if ([item containsString:@"CapsuleGram"] || [item containsString:@"ffmpeg"] || [item containsString:@".bundle"])
                     [msg appendFormat:@"  %@\n", item];
             NSString *fwPath = [[NSBundle mainBundle] privateFrameworksPath];
             NSArray *fwContents = [fm2 contentsOfDirectoryAtPath:fwPath error:nil];
             [msg appendString:@"\nFrameworks/:\n"];
             for (NSString *item in fwContents)
-                if ([item containsString:@"ffmpeg"] || [item containsString:@"libav"] || [item containsString:@"libsw"] || [item containsString:@"RyukGram"])
+                if ([item containsString:@"ffmpeg"] || [item containsString:@"libav"] || [item containsString:@"libsw"] || [item containsString:@"CapsuleGram"])
                     [msg appendFormat:@"  %@\n", item];
 
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:SCILocalized(@"FFmpegKit Debug")

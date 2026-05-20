@@ -461,12 +461,12 @@
                         return;
                     }
 
-                    BOOL useAlbum = [SCIUtils getBoolPref:@"save_to_ryukgram_album"];
+                    BOOL useAlbum = [SCIUtils getBoolPref:@"save_to_CapsuleGram_album"];
                     void (^onDone)(BOOL, NSError *) = ^(BOOL success, NSError *error) {
                         dispatch_async(dispatch_get_main_queue(), ^{
                             if (success) {
                                 [self.pill finishTicket:self.ticketId
-                                         successMessage:useAlbum ? SCILocalized(@"Saved to RyukGram") : SCILocalized(@"Saved to Photos")];
+                                         successMessage:useAlbum ? SCILocalized(@"Saved to CapsuleGram") : SCILocalized(@"Saved to Photos")];
                             } else {
                                 [self.pill finishTicket:self.ticketId errorMessage:SCILocalized(@"Failed to save")];
                             }

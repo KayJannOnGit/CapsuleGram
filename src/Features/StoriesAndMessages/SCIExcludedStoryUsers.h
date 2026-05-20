@@ -1,6 +1,6 @@
 // Persistent per-user exclusion list for story read-receipts. Lookup is by
 // user pk (string). Excluded users get normal seen behavior — your view
-// shows up in their viewer list as if RyukGram weren't installed.
+// shows up in their viewer list as if CapsuleGram weren't installed.
 #import <Foundation/Foundation.h>
 
 @interface SCIExcludedStoryUsers : NSObject

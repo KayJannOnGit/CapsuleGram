@@ -1,7 +1,7 @@
 // Replace IG's dark-gray surfaces with pure black.
 //
 // Swaps any near-black fill (RGB all < 0.13, alpha >= 0.9) for #000000.
-// RyukGram's own surfaces opt out by painting above the threshold or with
+// CapsuleGram's own surfaces opt out by painting above the threshold or with
 // alpha < 0.9 — see SCIOLEDSurface.xm.
 
 #import "../../Utils.h"

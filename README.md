@@ -133,7 +133,7 @@ chmod +x build.sh
 ---
 
 # Credits
-- [@KayJannOnGit](https://github.com/KayJannOnGit) — maintenance of this personal fork
+- [@KayJannOnGit](https://github.com/KayJannOnGit) — creator and maintainer of CapsuleGram, this personal fork
 - [@faroukbmiled](https://github.com/faroukbmiled) — creator of RyukGram, modifications and additional features this fork is built upon
 - [SCInsta](https://github.com/SoCuul/SCInsta) by [@SoCuul](https://github.com/SoCuul) — original tweak RyukGram is based on
 - [@BandarHL](https://github.com/BandarHL) — creator of the original BHInstagram project

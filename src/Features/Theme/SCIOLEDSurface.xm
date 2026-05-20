@@ -1,4 +1,4 @@
-// Keep RyukGram's table-view surfaces visible under Full OLED.
+// Keep CapsuleGram's table-view surfaces visible under Full OLED.
 //
 // Grouped-inset cells default to #1C1C1E which Full OLED blackens. Repaint
 // SCI*-owned cells at ~#121212 (alpha 0.89 passes the hook's a >= 0.9 gate)
@@ -7,7 +7,7 @@
 #import "../../Utils.h"
 #import <objc/runtime.h>
 
-static inline BOOL sciOLEDSurfaceInRyukGram(UIView *view) {
+static inline BOOL sciOLEDSurfaceInCapsuleGram(UIView *view) {
     UIResponder *r = view;
     while (r) {
         const char *name = class_getName([r class]);
@@ -30,7 +30,7 @@ static UIColor *sciOLEDSurfaceTone(void) {
 - (void)didMoveToSuperview {
     %orig;
     if (!self.superview) return;
-    if (!sciOLEDSurfaceInRyukGram((UIView *)self)) return;
+    if (!sciOLEDSurfaceInCapsuleGram((UIView *)self)) return;
     UIColor *tone = sciOLEDSurfaceTone();
     UIBackgroundConfiguration *bg = [UIBackgroundConfiguration listGroupedCellConfiguration];
     bg.backgroundColor = tone;
@@ -44,7 +44,7 @@ static UIColor *sciOLEDSurfaceTone(void) {
 - (void)didMoveToSuperview {
     %orig;
     if (!self.superview) return;
-    if (!sciOLEDSurfaceInRyukGram((UIView *)self)) return;
+    if (!sciOLEDSurfaceInCapsuleGram((UIView *)self)) return;
     self.backgroundConfiguration = [UIBackgroundConfiguration clearConfiguration];
 }
 %end

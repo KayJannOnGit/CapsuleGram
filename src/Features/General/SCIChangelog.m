@@ -2,7 +2,7 @@
 #import "../../Utils.h"
 #import "../../Tweak.h"
 
-static NSString *const kRepo = @"faroukbmiled/RyukGram";
+static NSString *const kRepo = @"KayJannOnGit/CapsuleGram";
 // Stores the SCIVersionString of the last tweak build whose popup was shown.
 // When the tweak updates, this mismatches and triggers a fresh check.
 static NSString *const kLastSeenVersionKey = @"sci_changelog_last_seen_version";
@@ -16,7 +16,7 @@ static NSString *sciChangelogCacheDir(void) {
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         NSString *base = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-        dir = [base stringByAppendingPathComponent:@"RyukGramChangelog"];
+        dir = [base stringByAppendingPathComponent:@"CapsuleGramChangelog"];
         [[NSFileManager defaultManager] createDirectoryAtPath:dir withIntermediateDirectories:YES attributes:nil error:nil];
     });
     return dir;
@@ -193,7 +193,7 @@ static NSAttributedString *sciRenderMarkdown(NSString *md) {
     NSString *name = self.releaseJSON[@"name"] ?: self.releaseJSON[@"tag_name"] ?: @"?";
     NSString *body = self.releaseJSON[@"body"] ?: @"";
     NSString *htmlURL = self.releaseJSON[@"html_url"] ?: @"";
-    self.title = SCILocalized(@"What's new in RyukGram");
+    self.title = SCILocalized(@"What's new in CapsuleGram");
 
     self.navigationItem.rightBarButtonItem =
         [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone

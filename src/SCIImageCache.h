@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 
 // Memory + disk image cache for remote URLs. Completion runs on main queue.
-// Disk cache lives under Library/Caches/RyukGramImages and survives reinstall
+// Disk cache lives under Library/Caches/CapsuleGramImages and survives reinstall
 // so long as Caches isn't wiped.
 @interface SCIImageCache : NSObject
 

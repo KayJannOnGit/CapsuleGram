@@ -10,7 +10,7 @@ static SCIPhotoAlbumWatcher *sciActiveWatcher = nil;
 @implementation SCIPhotoAlbum
 
 + (NSString *)albumName {
-    return @"RyukGram";
+    return @"CapsuleGram";
 }
 
 + (void)fetchOrCreateAlbumWithCompletion:(void (^)(PHAssetCollection *, NSError *))completion {

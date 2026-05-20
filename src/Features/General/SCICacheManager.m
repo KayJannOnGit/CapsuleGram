@@ -32,11 +32,11 @@ static NSArray<NSString *> *sciCacheDirs(void) {
     return dirs;
 }
 
-// Top-level entry names under any cache root that belong to RyukGram user
+// Top-level entry names under any cache root that belong to CapsuleGram user
 // data (analyzer snapshots, header cache, future persistent state) and must
 // survive a cache wipe.
 static BOOL sciIsProtectedEntryName(const char *name) {
-    return strcmp(name, "RyukGram") == 0;
+    return strcmp(name, "CapsuleGram") == 0;
 }
 
 // POSIX fts — avoids the NSDirectoryEnumerator per-entry alloc overhead.
@@ -49,7 +49,7 @@ static uint64_t sciDirectorySize(NSString *path) {
     uint64_t total = 0;
     FTSENT *ent;
     while ((ent = fts_read(fts))) {
-        // Don't descend into RyukGram user-data subtrees.
+        // Don't descend into CapsuleGram user-data subtrees.
         if (ent->fts_info == FTS_D && ent->fts_level == 1 &&
             sciIsProtectedEntryName(ent->fts_name)) {
             fts_set(fts, ent, FTS_SKIP);
@@ -64,7 +64,7 @@ static uint64_t sciDirectorySize(NSString *path) {
 }
 
 // Recursive delete of directory contents — the top-level dir itself is
-// preserved so IG's file handles stay valid, and RyukGram subtrees are
+// preserved so IG's file handles stay valid, and CapsuleGram subtrees are
 // skipped so our analyzer snapshots + header cache survive.
 static void sciDeleteDirectoryContents(NSString *path) {
     const char *root = [path fileSystemRepresentation];

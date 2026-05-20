@@ -1,8 +1,8 @@
 /*
- *  RyukGram — Localizable.strings  (English source of truth)
+ *  CapsuleGram — Localizable.strings  (English source of truth)
  *  -------------------------------------------------------------------------
  *
- *  Every user-facing string in RyukGram goes through the macro
+ *  Every user-facing string in CapsuleGram goes through the macro
  *      SCILocalized(@"English text here")
  *  in the Objective-C source. The argument is BOTH the lookup key and the
  *  English fallback, so if a missing translation the user still sees
@@ -26,7 +26,7 @@
  *     positional specifiers (%1$@ %2$lu).
  *  4. Keep embedded quotes escaped with a backslash: \" — and newlines
  *     as \n.
- *  5. Open a pull request at https://github.com/faroukbmiled/RyukGram/pulls
+ *  5. Open a pull request at https://github.com/KayJannOnGit/CapsuleGram/pulls
  *     so we can ship the language in the next release.
  *
  *
@@ -137,7 +137,7 @@
 "Open links in external browser" = "‏فتح الروابط في متصفح خارجي‏";
 "Opens links in Safari instead of Instagram's in-app browser" = "‏يفتح الروابط في متصفح سفاري بدلاً من متصفح إنستغرام الداخلي‏";
 "Privacy" = "‏الخصوصية‏";
-"Redacts RyukGram buttons from screenshots, screen recordings, and mirroring" = "‏يُخفي أزرار RyukGram من لقطات الشاشة وتسجيل الشاشة والعرض المنعكس‏";
+"Redacts CapsuleGram buttons from screenshots, screen recordings, and mirroring" = "‏يُخفي أزرار CapsuleGram من لقطات الشاشة وتسجيل الشاشة والعرض المنعكس‏";
 "Removes all ads from the Instagram app" = "‏إزالة جميع الإعلانات من تطبيق إنستغرام‏";
 "Removes igsh, utm_source, and other tracking parameters from shared links" = "‏إزالة معلمات التتبع من الروابط المشتركة‏";
 "Removes Instagram tracking wrappers (l.instagram.com) and UTM/fbclid params from URLs" = "‏إزالة روابط تتبع إنستغرام ومعلمات التتبع من الروابط‏";
@@ -197,7 +197,7 @@
 
 "Action button" = "‏زر الإجراء‏";
 "Adds 'View profile picture' and 'View cover' to story tray long-press menus" = "‏إضافة 'عرض صورة الملف الشخصي' و 'عرض الغلاف' إلى قوائم الضغط المطول في شريط القصص‏";
-"Adds a RyukGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "‏يضيف زر إجراء ريوك غرام أسفل كل منشور في اليوميات مع خيارات تنزيل ومشاركة ونسخ وتوسيع وإعادة نشر. يؤدي النقر إلى فتح القائمة افتراضيًا؛ قم بتغيير السلوك أدناه.‏";
+"Adds a CapsuleGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "‏يضيف زر إجراء ريوك غرام أسفل كل منشور في اليوميات مع خيارات تنزيل ومشاركة ونسخ وتوسيع وإعادة نشر. يؤدي النقر إلى فتح القائمة افتراضيًا؛ قم بتغيير السلوك أدناه.‏";
 "Controls when and how the feed refreshes. Background refresh occurs when returning to the app after ~10 minutes. Home button refresh occurs when tapping the Home tab while already on it." = "‏يتحكم في متى وكيف يتم تحديث اليوميات. يحدث التحديث في الخلفية عند العودة إلى التطبيق بعد ~10 دقائق. ويحدث تحديث زر الصفحة الرئيسية عند النقر فوقه أثناء التواجد فيه بالفعل.‏";
 "Default tap action" = "‏إجراء النقر الافتراضي‏";
 "Disable background refresh" = "‏تعطيل التحديث في الخلفية‏";
@@ -240,7 +240,7 @@
 // Settings → Reels tab                                                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "‏يضيف زر إجراء ريوك غرام أعلى الشريط الجانبي لمقطع ريلز مع خيارات عرض الغلاف وتنزيل ومشاركة ونسخ وتوسيع وإعادة نشر. يؤدي النقر إلى فتح القائمة افتراضيًا؛ قم بتغيير السلوك أدناه.‏";
+"Adds a CapsuleGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "‏يضيف زر إجراء ريوك غرام أعلى الشريط الجانبي لمقطع ريلز مع خيارات عرض الغلاف وتنزيل ومشاركة ونسخ وتوسيع وإعادة نشر. يؤدي النقر إلى فتح القائمة افتراضيًا؛ قم بتغيير السلوك أدناه.‏";
 "Always show progress scrubber" = "‏إظهار شريط التقدم دائمًا‏";
 "Auto-scroll reels" = "‏التمرير التلقائي لمقاطع ريلز‏";
 "Change what happens when you tap on a reel" = "‏تغيير ما يحدث عند النقر على مقطع ريلز‏";
@@ -255,7 +255,7 @@
 "Hides the top navigation bar when watching reels" = "‏إخفاء شريط التنقل العلوي عند مشاهدة ريلز‏";
 "Hiding" = "‏إخفاء‏";
 "IG default" = "‏الافتراضي لإنستغرام‏";
-"IG default: native behavior. RyukGram: re-advances after swiping back." = "‏الافتراضي لإنستغرام: السلوك الأصلي. ريوك غرام: يعيد التقدم بعد التمرير للخلف.‏";
+"IG default: native behavior. CapsuleGram: re-advances after swiping back." = "‏الافتراضي لإنستغرام: السلوك الأصلي. ريوك غرام: يعيد التقدم بعد التمرير للخلف.‏";
 "Limits" = "‏الحدود‏";
 "Limits the amount of reels available to scroll at any given time, and prevents refreshing" = "‏يحد من عدد مقاطع ريلز المتاحة للتمرير في أي وقت، ويمنع التحديث‏";
 "Only loads %@ %@" = "‏تحميل %@ %@ فقط‏";
@@ -263,7 +263,7 @@
 "Prevent doom scrolling" = "‏منع التمرير المفرط‏";
 "Prevents reels from being scrolled to the next video" = "‏يمنع التمرير إلى الفيديو التالي في ريلز‏";
 "Prevents reels from unmuting when the volume/silent button is pressed" = "‏يمنع إلغاء كتم صوت ريلز عند الضغط على أزرار الصوت‏";
-"RyukGram" = "‏ريوك غرام‏";
+"CapsuleGram" = "‏ريوك غرام‏";
 "Shows an alert when you trigger a reels refresh" = "‏يعرض تنبيهًا عند بدء تحديث ريلز‏";
 "Shows buttons to reveal and auto-fill the password on locked reels" = "‏يظهر أزرارًا للكشف عن كلمة المرور وتعبئتها تلقائيًا في مقاطع ريلز المقفلة‏";
 "Tap Controls" = "‏عناصر تحكم النقر‏";
@@ -308,7 +308,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 "Confirm before download" = "‏التأكيد قبل التنزيل‏";
-"Deprecated. The RyukGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "‏مهمل. زر إجراء ريوك غرام (المكوّن لكل ميزة في اليوميات وريلز والقصص) هو الطريقة الجديدة لتنزيل الوسائط. مكّن هذا الخيار فقط إذا كنت تفضل الضغط المطول القديم المباشر على الوسائط.‏";
+"Deprecated. The CapsuleGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "‏مهمل. زر إجراء ريوك غرام (المكوّن لكل ميزة في اليوميات وريلز والقصص) هو الطريقة الجديدة لتنزيل الوسائط. مكّن هذا الخيار فقط إذا كنت تفضل الضغط المطول القديم المباشر على الوسائط.‏";
 "Downloads" = "‏التنزيلات‏";
 "Downloads with %@ %@" = "‏تنزيلات باستخدام %@ %@‏";
 "Enable long-press gesture" = "‏تفعيل إيماءة الضغط المطول‏";
@@ -319,18 +319,18 @@
 "Press finger(s) for %@ %@" = "‏اضغط بإصبع/أصابع لمدة %@ %@‏";
 "Route saves into a dedicated album in Photos instead of the camera roll root" = "‏توجيه الحفظ إلى ألبوم مخصص في تطبيق الصور بدلاً من الألبوم الرئيسي‏";
 "Save action" = "‏إجراء الحفظ‏";
-"Save to RyukGram album" = "‏الحفظ في ألبوم ريوك غرام‏";
+"Save to CapsuleGram album" = "‏الحفظ في ألبوم ريوك غرام‏";
 "Saving" = "‏يتم الحفظ‏";
 "Show a confirmation dialog before starting a download" = "‏عرض نافذة تأكيد قبل بدء التنزيل‏";
 "What happens after the gesture downloads" = "‏ماذا يحدث بعد تنزيلات الإيماءة‏";
-"When \"Save to RyukGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"RyukGram\" album in your Photos library." = "‏عند تشغيل \"الحفظ في ألبوم ريوك غرام\"، يتم توجيه التنزيلات واختيارات \"الحفظ في الصور\" إلى ألبوم مخصص يسمى \"RyukGram\" في مكتبة الصور الخاصة بك.‏";
+"When \"Save to CapsuleGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"CapsuleGram\" album in your Photos library." = "‏عند تشغيل \"الحفظ في ألبوم ريوك غرام\"، يتم توجيه التنزيلات واختيارات \"الحفظ في الصور\" إلى ألبوم مخصص يسمى \"CapsuleGram\" في مكتبة الصور الخاصة بك.‏";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 STORIES                                  //
 // Settings → Stories tab                                                   //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "‏يضيف زر إجراء ريوك غرام بجوار زر المشاهدة في القصص مع خيارات تنزيل ومشاركة ونسخ وتوسيع وإعادة نشر وعرض الإشارات. يؤدي النقر إلى فتح القائمة؛ قم بتغيير السلوك أدناه.‏";
+"Adds a CapsuleGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "‏يضيف زر إجراء ريوك غرام بجوار زر المشاهدة في القصص مع خيارات تنزيل ومشاركة ونسخ وتوسيع وإعادة نشر وعرض الإشارات. يؤدي النقر إلى فتح القائمة؛ قم بتغيير السلوك أدناه.‏";
 "Adds a speaker button to the story overlay to unmute/mute audio. Also available in the 3-dot menu" = "‏يضيف زر مكبر صوت إلى القصة لكتم وإلغاء كتم الصوت. متاح أيضًا في قائمة النقاط الثلاث‏";
 "Advance on story like" = "‏التقدم عند الإعجاب بالقصة‏";
 "Advance on story reply" = "‏التقدم عند الرد على القصة‏";
@@ -564,7 +564,7 @@
 "Enable tweak settings quick-access" = "‏تفعيل الوصول السريع لإعدادات الأداة‏";
 "Free %@ of Instagram cache. A restart is recommended." = "‏تحرير %@ من ذاكرة إنستغرام. يُنصح بإعادة التشغيل.‏";
 "Freed %@. Restart to apply." = "‏تم تحرير %@. أعد التشغيل للتطبيق.‏";
-"Hold on the home tab to open RyukGram settings" = "‏اضغط مطولاً على تبويب الصفحة الرئيسية لفتح إعدادات ريوك غرام‏";
+"Hold on the home tab to open CapsuleGram settings" = "‏اضغط مطولاً على تبويب الصفحة الرئيسية لفتح إعدادات ريوك غرام‏";
 "Instagram" = "‏إنستغرام‏";
 "Monthly" = "‏شهرياً‏";
 "Nothing to clear" = "‏لا شيء للمسح‏";
@@ -714,7 +714,7 @@
 "Save to Photos?" = "‏حفظ في الصور؟‏";
 "Saved %lu items" = "‏تم حفظ %lu من العناصر‏";
 "Saved to Photos" = "‏تم الحفظ في الصور‏";
-"Saved to RyukGram" = "‏تم الحفظ في ريوك غرام‏";
+"Saved to CapsuleGram" = "‏تم الحفظ في ريوك غرام‏";
 "Tap to cancel" = "‏انقر للإلغاء‏";
 "Unmute audio" = "‏إلغاء كتم الصوت‏";
 "View cover" = "‏عرض الغلاف‏";
@@ -962,7 +962,7 @@
 "Existing values for the selected scope will be replaced. The app may need to restart for some changes to take effect." = "‏سيتم استبدال القيم الحالية للنطاق المحدد. قد يحتاج التطبيق إلى إعادة التشغيل ليسري مفعول بعض التغييرات.‏";
 "Export" = "‏تصدير‏";
 "File has no importable sections." = "‏لا يحتوي الملف على أقسام قابلة للاستيراد.‏";
-"File is not a valid RyukGram export." = "‏الملف ليس تصديرًا صالحًا من RyukGram.‏";
+"File is not a valid CapsuleGram export." = "‏الملف ليس تصديرًا صالحًا من CapsuleGram.‏";
 "Filter" = "‏تصفية‏";
 "First scan: we collect your followers and following lists and save them locally." = "‏أول تحليل: نجمع قوائم المتابعين والمتابَعين ونحفظها محليًا.‏";
 "Follow %lu" = "‏متابعة %lu‏";
@@ -1131,7 +1131,7 @@
 // Strings from the About / Credits footer of Settings.                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"%@ — GitHub & Telegram" = "‏%@ — جيت هاب وتيليجرام‏";
+"%@ — GitHub & Reddit" = "‏%@ — جيت هاب وريديت‏";
 "About" = "‏حول‏";
 "Arabic translation" = "‏الترجمة العربية‏";
 "Chinese (Traditional) translation" = "الترجمة الصينية (التقليدية)";
@@ -1148,18 +1148,19 @@
 "Releases" = "‏الإصدارات‏";
 "Report an issue" = "‏الإبلاغ عن مشكلة‏";
 "Russian translation" = "‏الترجمة الروسية‏";
-"RyukGram developer" = "‏مطوّر RyukGram‏";
-"Join Telegram channel" = "‏انضم إلى قناة تيليجرام‏";
+"CapsuleGram developer" = "‏مطوّر CapsuleGram‏";
+"Reddit" = "‏ريديت‏";
+"Support on Ko-fi" = "‏ادعم على كو-في‏";
 "Source code" = "‏الكود المصدري‏";
 "View on GitHub" = "‏عرض على جيت هاب‏";
 "Spanish translation" = "‏الترجمة الإسبانية‏";
 "Support the original developer" = "‏ادعم المطور الأصلي‏";
-"Telegram channel" = "‏قناة تيليجرام‏";
+"Reddit" = "‏ريديت‏";
 "Testing and feature suggestions" = "‏الاختبار واقتراحات الميزات‏";
 "Tweak settings" = "‏إعدادات التعديل‏";
 "Version" = "‏الإصدار‏";
 "Version, credits, and links" = "‏الإصدار والاعتمادات والروابط‏";
-"What's new in RyukGram" = "‏جديد RyukGram‏";
+"What's new in CapsuleGram" = "‏جديد CapsuleGram‏";
 
 //////////////////////////////////////////////////////////////////////////////
 //                             HD DOWNLOADS                                 //

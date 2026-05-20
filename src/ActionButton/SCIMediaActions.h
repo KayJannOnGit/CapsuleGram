@@ -83,7 +83,7 @@ typedef NS_ENUM(NSInteger, SCIActionContext) {
 /// visible UFI bar. Uses the existing button ivars to avoid reimplementing.
 + (void)triggerRepostForContext:(SCIActionContext)ctx sourceView:(UIView *)sourceView;
 
-/// Open the RyukGram settings page for the given context.
+/// Open the CapsuleGram settings page for the given context.
 + (void)openSettingsForContext:(SCIActionContext)ctx fromView:(UIView *)sourceView;
 
 // MARK: - Carousel bulk actions

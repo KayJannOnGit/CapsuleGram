@@ -1,8 +1,8 @@
 /*
- *  RyukGram — Localizable.strings  (English source of truth)
+ *  CapsuleGram — Localizable.strings  (English source of truth)
  *  -------------------------------------------------------------------------
  *
- *  Every user-facing string in RyukGram goes through the macro
+ *  Every user-facing string in CapsuleGram goes through the macro
  *      SCILocalized(@"English text here")
  *  in the Objective-C source. The argument is BOTH the lookup key and the
  *  English fallback, so if a translation is missing the user still sees
@@ -26,7 +26,7 @@
  *     positional specifiers (%1$@ %2$lu).
  *  4. Keep embedded quotes escaped with a backslash: \" — and newlines
  *     as \n.
- *  5. Open a pull request at https://github.com/faroukbmiled/RyukGram/pulls
+ *  5. Open a pull request at https://github.com/KayJannOnGit/CapsuleGram/pulls
  *     so we can ship the language in the next release.
  *
  *
@@ -63,10 +63,10 @@
 // and are hand-authored rather than extracted from English source.         //
 //////////////////////////////////////////////////////////////////////////////
 
-"settings.firstrun.message" = "未來：在個人頁面右上角的三條線上長按，即可重新開啟 RyukGram 設定。";
+"settings.firstrun.message" = "未來：在個人頁面右上角的三條線上長按，即可重新開啟 CapsuleGram 設定。";
 "settings.firstrun.ok" = "我了解了！";
-"settings.firstrun.title" = "RyukGram 設定資訊";
-"settings.language.english_only" = "RyukGram 目前僅內建英文。其他語言已接好接線等待翻譯 — 請依 README 的簡短指南協助翻譯。";
+"settings.firstrun.title" = "CapsuleGram 設定資訊";
+"settings.language.english_only" = "CapsuleGram 目前僅內建英文。其他語言已接好接線等待翻譯 — 請依 README 的簡短指南協助翻譯。";
 "settings.language.help_translate" = "協助翻譯";
 "settings.language.ok" = "確定";
 "settings.language.system" = "系統預設";
@@ -75,7 +75,7 @@
 "settings.results.none" = "無結果";
 "settings.results.one" = "%lu 筆結果";
 "settings.search.placeholder" = "搜尋設定";
-"settings.title" = "RyukGram 設定";
+"settings.title" = "CapsuleGram 設定";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 GENERAL                                  //
@@ -135,7 +135,7 @@
 "Open links in external browser" = "在外部瀏覽器開啟連結";
 "Opens links in Safari instead of Instagram's in-app browser" = "在 Safari 而非 Instagram 內建瀏覽器開啟連結";
 "Privacy" = "隱私";
-"Redacts RyukGram buttons from screenshots, screen recordings, and mirroring" = "從截圖、螢幕錄影及鏡像中隱藏 RyukGram 按鈕";
+"Redacts CapsuleGram buttons from screenshots, screen recordings, and mirroring" = "從截圖、螢幕錄影及鏡像中隱藏 CapsuleGram 按鈕";
 "Removes all ads from the Instagram app" = "移除 Instagram 應用程式中的所有廣告";
 "Removes igsh, utm_source, and other tracking parameters from shared links" = "移除分享連結中的 igsh、utm_source 及其他追蹤參數";
 "Removes Instagram tracking wrappers (l.instagram.com) and UTM/fbclid params from URLs" = "移除 Instagram 追蹤包裝器（l.instagram.com）及 URL 中的 UTM／fbclid 參數";
@@ -195,7 +195,7 @@
 
 "Action button" = "動作按鈕";
 "Adds 'View profile picture' and 'View cover' to story tray long-press menus" = "在限時動態長按選單中新增「查看大頭貼」和「查看封面」";
-"Adds a RyukGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "在每則動態消息貼文下方新增 RyukGram 動作按鈕，包含下載／分享／複製／展開／轉貼選項。預設點擊會開啟選單；可於下方更改點擊行為。";
+"Adds a CapsuleGram action button under each feed post with download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "在每則動態消息貼文下方新增 CapsuleGram 動作按鈕，包含下載／分享／複製／展開／轉貼選項。預設點擊會開啟選單；可於下方更改點擊行為。";
 "Controls when and how the feed refreshes. Background refresh occurs when returning to the app after ~10 minutes. Home button refresh occurs when tapping the Home tab while already on it." = "控制動態消息的刷新時間與方式。背景刷新會在約 10 分鐘後返回應用時執行。首頁按鈕刷新會在已在首頁標籤時點擊該標籤執行。";
 "Default tap action" = "預設點擊動作";
 "Disable background refresh" = "停用背景刷新";
@@ -238,7 +238,7 @@
 // Settings → Reels tab                                                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "在短片側邊欄上方新增 RyukGram 操作按鈕，包含觀看封面/下載/分享/複製/展開/轉貼項目。預設點擊開啟選單；可在下方更改點擊行為。";
+"Adds a CapsuleGram action button above the reel sidebar with view-cover/download/share/copy/expand/repost entries. Tap opens the menu by default; change the tap behavior below." = "在短片側邊欄上方新增 CapsuleGram 操作按鈕，包含觀看封面/下載/分享/複製/展開/轉貼項目。預設點擊開啟選單；可在下方更改點擊行為。";
 "Always show progress scrubber" = "始終顯示進度條";
 "Auto-scroll reels" = "自動捲動短片";
 "Change what happens when you tap on a reel" = "更改點擊短片時的動作";
@@ -253,7 +253,7 @@
 "Hides the top navigation bar when watching reels" = "觀看短片時隱藏頂部導覽列";
 "Hiding" = "隱藏";
 "IG default" = "IG 預設";
-"IG default: native behavior. RyukGram: re-advances after swiping back." = "IG 預設：原生行為。RyukGram：在向後滑動後會重新前進。";
+"IG default: native behavior. CapsuleGram: re-advances after swiping back." = "IG 預設：原生行為。CapsuleGram：在向後滑動後會重新前進。";
 "Limits" = "限制";
 "Limits the amount of reels available to scroll at any given time, and prevents refreshing" = "限制同時可捲動的短片數量，並防止重新整理";
 "Only loads %@ %@" = "只載入 %@ %@";
@@ -261,7 +261,7 @@
 "Prevent doom scrolling" = "防止無止盡捲動";
 "Prevents reels from being scrolled to the next video" = "防止短片捲動至下一支影片";
 "Prevents reels from unmuting when the volume/silent button is pressed" = "按下音量/靜音按鈕時防止短片取消靜音";
-"RyukGram" = "RyukGram";
+"CapsuleGram" = "CapsuleGram";
 "Shows an alert when you trigger a reels refresh" = "觸發短片重新整理時顯示警告";
 "Shows buttons to reveal and auto-fill the password on locked reels" = "顯示按鈕以揭露並自動填入鎖定短片的密碼";
 "Tap Controls" = "點擊控制";
@@ -306,7 +306,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 "Confirm before download" = "下載前確認";
-"Deprecated. The RyukGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "已棄用。RyukGram 動作按鈕（在動態/短片/限時動態中依功能設定）是下載媒體的新方式。僅當你偏好舊版多指長按直接下載媒體時，才啟用此主開關。";
+"Deprecated. The CapsuleGram action button (configured per feature in Feed/Reels/Stories) is the new way to download media. Enable this master toggle only if you prefer the old multi-finger long-press directly on the media." = "已棄用。CapsuleGram 動作按鈕（在動態/短片/限時動態中依功能設定）是下載媒體的新方式。僅當你偏好舊版多指長按直接下載媒體時，才啟用此主開關。";
 "Downloads" = "下載";
 "Downloads with %@ %@" = "下載 %@ %@";
 "Enable long-press gesture" = "啟用長按手勢";
@@ -317,18 +317,18 @@
 "Press finger(s) for %@ %@" = "按壓 %@ %@ 手指";
 "Route saves into a dedicated album in Photos instead of the camera roll root" = "將儲存路徑導向專用相簿，而非相機膠卷根目錄";
 "Save action" = "儲存動作";
-"Save to RyukGram album" = "儲存至 RyukGram 相簿";
+"Save to CapsuleGram album" = "儲存至 CapsuleGram 相簿";
 "Saving" = "儲存中";
 "Show a confirmation dialog before starting a download" = "開始下載前顯示確認對話框";
 "What happens after the gesture downloads" = "手勢下載後的動作";
-"When \"Save to RyukGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"RyukGram\" album in your Photos library." = "啟用 \"儲存至 RyukGram 相簿\" 時，下載及分享選單中的 \"儲存至照片\" 將導向你照片庫中的專用 \"RyukGram\" 相簿。";
+"When \"Save to CapsuleGram album\" is on, downloads and share-sheet \"Save to Photos\" picks are routed into a dedicated \"CapsuleGram\" album in your Photos library." = "啟用 \"儲存至 CapsuleGram 相簿\" 時，下載及分享選單中的 \"儲存至照片\" 將導向你照片庫中的專用 \"CapsuleGram\" 相簿。";
 
 //////////////////////////////////////////////////////////////////////////////
 //                                 STORIES                                  //
 // Settings → Stories tab                                                   //
 //////////////////////////////////////////////////////////////////////////////
 
-"Adds a RyukGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "在限時動態的觀看按鈕旁新增 RyukGram 動作按鈕，包含下載/分享/複製/展開/轉發/查看提及等選項。預設點擊開啟選單；可在下方更改點擊行為。";
+"Adds a CapsuleGram action button next to the eye button on stories with download/share/copy/expand/repost/view-mentions entries. Tap opens the menu by default; change the tap behavior below." = "在限時動態的觀看按鈕旁新增 CapsuleGram 動作按鈕，包含下載/分享/複製/展開/轉發/查看提及等選項。預設點擊開啟選單；可在下方更改點擊行為。";
 "Adds a speaker button to the story overlay to unmute/mute audio. Also available in the 3-dot menu" = "在限時動態覆蓋層新增喇叭按鈕，可靜音/取消靜音音訊。此功能亦可在三點選單中使用";
 "Advance on story like" = "按讚後自動切換限時動態";
 "Advance on story reply" = "回覆後自動切換限時動態";
@@ -562,7 +562,7 @@
 "Enable tweak settings quick-access" = "啟用調整設定快速存取";
 "Free %@ of Instagram cache. A restart is recommended." = "釋放 %@ 的 Instagram 快取。建議重新啟動。";
 "Freed %@. Restart to apply." = "已釋放 %@。重新啟動以套用。";
-"Hold on the home tab to open RyukGram settings" = "長按主頁標籤以開啟 RyukGram 設定";
+"Hold on the home tab to open CapsuleGram settings" = "長按主頁標籤以開啟 CapsuleGram 設定";
 "Instagram" = "Instagram";
 "Monthly" = "每月";
 "Nothing to clear" = "無可清除內容";
@@ -712,7 +712,7 @@
 "Save to Photos?" = "要儲存到「照片」嗎？";
 "Saved %lu items" = "已儲存 %lu 項目";
 "Saved to Photos" = "已儲存至照片";
-"Saved to RyukGram" = "已儲存至 RyukGram";
+"Saved to CapsuleGram" = "已儲存至 CapsuleGram";
 "Tap to cancel" = "點擊以取消";
 "Unmute audio" = "取消靜音";
 "View cover" = "查看封面";
@@ -960,7 +960,7 @@
 "Existing values for the selected scope will be replaced. The app may need to restart for some changes to take effect." = "所選範圍的既有值將被覆寫。部分變更可能需重新啟動應用程式後才會生效。";
 "Export" = "匯出";
 "File has no importable sections." = "檔案中沒有可匯入的區段。";
-"File is not a valid RyukGram export." = "檔案不是有效的 RyukGram 匯出檔。";
+"File is not a valid CapsuleGram export." = "檔案不是有效的 CapsuleGram 匯出檔。";
 "Filter" = "篩選";
 "First scan: we collect your followers and following lists and save them locally." = "首次掃描：我們會收集你的粉絲及追蹤清單並儲存在本機。";
 "Follow %lu" = "追蹤 %lu";
@@ -1129,7 +1129,7 @@
 // Strings from the About / Credits footer of Settings.                     //
 //////////////////////////////////////////////////////////////////////////////
 
-"%@ — GitHub & Telegram" = "%@ — GitHub 與 Telegram";
+"%@ — GitHub & Reddit" = "%@ — GitHub 與 Reddit";
 "About" = "關於";
 "Arabic translation" = "阿拉伯文翻譯";
 "Chinese (Traditional) translation" = "繁體中文翻譯";
@@ -1147,18 +1147,19 @@
 "Releases" = "版本發行";
 "Report an issue" = "回報問題";
 "Russian translation" = "俄文翻譯";
-"RyukGram developer" = "RyukGram 開發者";
-"Join Telegram channel" = "加入 Telegram 頻道";
+"CapsuleGram developer" = "CapsuleGram 開發者";
+"Reddit" = "Reddit";
+"Support on Ko-fi" = "在 Ko-fi 支持";
 "View on GitHub" = "在 GitHub 查看";
 "Source code" = "原始碼";
 "Spanish translation" = "西班牙文翻譯";
 "Support the original developer" = "支持原開發者";
-"Telegram channel" = "Telegram 頻道";
+"Reddit" = "Reddit";
 "Testing and feature suggestions" = "測試與功能建議";
 "Tweak settings" = "Tweak 設定";
 "Version" = "版本";
 "Version, credits, and links" = "版本、製作團隊與連結";
-"What's new in RyukGram" = "RyukGram 有什麼新功能";
+"What's new in CapsuleGram" = "CapsuleGram 有什麼新功能";
 
 //////////////////////////////////////////////////////////////////////////////
 //                             HD DOWNLOADS                                 //

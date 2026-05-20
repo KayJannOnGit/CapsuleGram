@@ -1,4 +1,4 @@
-// Reels action button — injects a RyukGram action button above the reel's
+// Reels action button — injects a CapsuleGram action button above the reel's
 // vertical like/comment/share sidebar (IGSundialViewerVerticalUFI).
 
 #import "../../InstagramHeaders.h"

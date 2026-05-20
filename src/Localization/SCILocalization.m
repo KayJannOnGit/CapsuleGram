@@ -10,18 +10,18 @@ static dispatch_once_t gResourceOnce;
 
 NSString *SCILocalizationOverridePath(void) {
     NSString *lib = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
-    return [lib stringByAppendingPathComponent:@"RyukGram.bundle"];
+    return [lib stringByAppendingPathComponent:@"CapsuleGram.bundle"];
 }
 
 static NSBundle *resolveResourceBundle(void) {
-    // 1) Sideload: cyan copies RyukGram.bundle into the app's resource root.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"RyukGram" ofType:@"bundle"];
+    // 1) Sideload: cyan copies CapsuleGram.bundle into the app's resource root.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"CapsuleGram" ofType:@"bundle"];
 
     // 2) Jailbreak: .deb drops the bundle into Library/Application Support.
     if (!path) {
         NSArray *fallbacks = @[
-            @"/var/jb/Library/Application Support/RyukGram.bundle",
-            @"/Library/Application Support/RyukGram.bundle",
+            @"/var/jb/Library/Application Support/CapsuleGram.bundle",
+            @"/Library/Application Support/CapsuleGram.bundle",
         ];
         NSFileManager *fm = [NSFileManager defaultManager];
         for (NSString *p in fallbacks) {
@@ -35,7 +35,7 @@ static NSBundle *resolveResourceBundle(void) {
         if (dladdr((const void *)&resolveResourceBundle, &info) && info.dli_fname) {
             NSString *dylibPath = [NSString stringWithUTF8String:info.dli_fname];
             NSString *candidate = [[dylibPath stringByDeletingLastPathComponent]
-                                    stringByAppendingPathComponent:@"RyukGram.bundle"];
+                                    stringByAppendingPathComponent:@"CapsuleGram.bundle"];
             if ([[NSFileManager defaultManager] fileExistsAtPath:candidate]) path = candidate;
         }
     }

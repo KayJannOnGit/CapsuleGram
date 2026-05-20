@@ -25,7 +25,7 @@
     }];
 
     UIImageView *logo = [[UIImageView alloc] initWithImage:
-        [UIImage imageNamed:@"ryukgram"
+        [UIImage imageNamed:@"CapsuleGram"
                    inBundle:SCILocalizationBundle()
       compatibleWithTraitCollection:nil]];
     logo.contentMode = UIViewContentModeScaleAspectFill;
@@ -36,7 +36,7 @@
     [logo.heightAnchor constraintEqualToConstant:78].active = YES;
 
     UILabel *title = [[UILabel alloc] init];
-    title.text = @"RyukGram";
+    title.text = @"CapsuleGram";
     title.font = [UIFont systemFontOfSize:22 weight:UIFontWeightBold];
     title.textAlignment = NSTextAlignmentCenter;
 
@@ -52,18 +52,30 @@
                                       background:[UIColor tertiarySystemFillColor]];
     [github addTarget:self action:@selector(openGitHub) forControlEvents:UIControlEventTouchUpInside];
 
-    UIButton *telegram = [self makeButtonWithTitle:SCILocalized(@"Join Telegram channel")
-                                          sfSymbol:@"paperplane.fill"
-                                              tint:[UIColor whiteColor]
-                                        background:[UIColor colorWithRed:0.15 green:0.56 blue:0.93 alpha:1.0]];
-    [telegram addTarget:self action:@selector(openTelegram) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *reddit = [self makeButtonWithTitle:SCILocalized(@"Reddit")
+                                      sfSymbol:@"bubble.left.and.bubble.right.fill"
+                                          tint:[UIColor whiteColor]
+                                    background:[UIColor colorWithRed:1.0 green:0.27 blue:0.0 alpha:1.0]];
+    [reddit addTarget:self action:@selector(openReddit) forControlEvents:UIControlEventTouchUpInside];
 
-    UIStackView *buttons = [[UIStackView alloc] initWithArrangedSubviews:@[github, telegram]];
+    UIButton *kofi = [self makeButtonWithTitle:SCILocalized(@"Support on Ko-fi")
+                                    sfSymbol:@"cup.and.saucer.fill"
+                                        tint:[UIColor whiteColor]
+                                  background:[UIColor colorWithRed:1.0 green:0.37 blue:0.36 alpha:1.0]];
+    [kofi addTarget:self action:@selector(openKoFi) forControlEvents:UIControlEventTouchUpInside];
+
+    UIStackView *buttons = [[UIStackView alloc] initWithArrangedSubviews:@[github, reddit, kofi]];
     buttons.axis = UILayoutConstraintAxisVertical;
     buttons.spacing = 10;
     buttons.distribution = UIStackViewDistributionFillEqually;
 
-    UIStackView *stack = [[UIStackView alloc] initWithArrangedSubviews:@[logo, title, version, buttons]];
+    UILabel *byLabel = [[UILabel alloc] init];
+    byLabel.text = @"Enhanced by KayJann";
+    byLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
+    byLabel.textColor = [UIColor secondaryLabelColor];
+    byLabel.textAlignment = NSTextAlignmentCenter;
+
+    UIStackView *stack = [[UIStackView alloc] initWithArrangedSubviews:@[logo, title, version, buttons, byLabel]];
     stack.axis = UILayoutConstraintAxisVertical;
     stack.alignment = UIStackViewAlignmentCenter;
     stack.spacing = 14;
@@ -101,22 +113,23 @@
 }
 
 - (void)openGitHub {
-    NSURL *url = [NSURL URLWithString:@"https://github.com/faroukbmiled/RyukGram"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/KayJannOnGit/CapsuleGram"];
     [self dismissViewControllerAnimated:YES completion:^{
         if (url) [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }];
 }
 
-- (void)openTelegram {
-    UIApplication *app = [UIApplication sharedApplication];
-    NSURL *scheme = [NSURL URLWithString:@"tg://resolve?domain=ryukgram"];
-    NSURL *web = [NSURL URLWithString:@"https://t.me/ryukgram"];
-    // IG's Info.plist doesn't whitelist `tg` for canOpenURL — skip the check
-    // and fall through to the web link if the scheme isn't handled.
+- (void)openReddit {
+    NSURL *url = [NSURL URLWithString:@"https://reddit.com/u/KayJann"];
     [self dismissViewControllerAnimated:YES completion:^{
-        [app openURL:scheme options:@{} completionHandler:^(BOOL ok) {
-            if (!ok && web) [app openURL:web options:@{} completionHandler:nil];
-        }];
+        if (url) [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+    }];
+}
+
+- (void)openKoFi {
+    NSURL *url = [NSURL URLWithString:@"https://ko-fi.com/kayjann"];
+    [self dismissViewControllerAnimated:YES completion:^{
+        if (url) [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }];
 }
 

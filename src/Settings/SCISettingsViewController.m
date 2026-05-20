@@ -120,7 +120,7 @@ static char rowStaticRef[] = "row";
     [alert addAction:[UIAlertAction actionWithTitle:SCILocalized(@"settings.language.ok") style:UIAlertActionStyleCancel handler:nil]];
     [alert addAction:[UIAlertAction actionWithTitle:SCILocalized(@"settings.language.help_translate") style:UIAlertActionStyleDefault
                                             handler:^(__unused UIAlertAction *a) {
-        NSURL *url = [NSURL URLWithString:@"https://github.com/faroukbmiled/RyukGram#translating-ryukgram"];
+        NSURL *url = [NSURL URLWithString:@"https://github.com/KayJannOnGit/CapsuleGram#translating-CapsuleGram"];
         if (url) [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }]];
     [self presentViewController:alert animated:YES completion:nil];
@@ -157,7 +157,7 @@ static char rowStaticRef[] = "row";
                                           image:nil
                                      identifier:nil
                                         handler:^(__unused UIAction *a) {
-        NSURL *url = [NSURL URLWithString:@"https://github.com/faroukbmiled/RyukGram#translating-ryukgram"];
+        NSURL *url = [NSURL URLWithString:@"https://github.com/KayJannOnGit/CapsuleGram#translating-CapsuleGram"];
         if (url) [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }];
 

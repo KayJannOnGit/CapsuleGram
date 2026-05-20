@@ -9,7 +9,7 @@ extern "C" {
 // Localization pref key — value is BCP-47 code ("en", "ar", "es") or "system".
 extern NSString *const SCILanguagePrefKey;
 
-// Resource bundle (RyukGram.bundle) shipped next to the dylib.
+// Resource bundle (CapsuleGram.bundle) shipped next to the dylib.
 // Returns nil only on broken installs; callers fall back to the key itself.
 NSBundle * _Nullable SCILocalizationBundle(void);
 
@@ -27,7 +27,7 @@ NSString *SCIResolvedLanguageCode(void);
 // Invalidate cached bundles/strings after a language switch.
 void SCILocalizationReset(void);
 
-// Writable path for user-imported lproj overrides (Library/RyukGram.bundle/).
+// Writable path for user-imported lproj overrides (Library/CapsuleGram.bundle/).
 NSString *SCILocalizationOverridePath(void);
 
 #ifdef __cplusplus

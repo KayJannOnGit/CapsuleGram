@@ -1,4 +1,4 @@
-// SCIChangelog — fetches RyukGram release notes from GitHub and presents
+// SCIChangelog — fetches CapsuleGram release notes from GitHub and presents
 // them in a scrollable popup. Shows automatically on launch when the tweak
 // version changes; also available from the About page.
 

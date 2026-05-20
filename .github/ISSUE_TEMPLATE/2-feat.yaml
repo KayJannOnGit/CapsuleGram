@@ -4,7 +4,7 @@ title: 'feat: '
 labels:
   - enhancement
 assignees:
-  - faroukbmiled
+  - KayJannOnGit
 body:
   - type: checkboxes
     id: before-start
@@ -14,7 +14,7 @@ body:
       options:
         - label: >-
             I have read through the
-            [FAQ](https://github.com/faroukbmiled/RyukGram/wiki/FAQ)
+            [FAQ](https://github.com/KayJannOnGit/CapsuleGram/wiki/FAQ)
           required: true
         - label: I have made sure this feature has not already been already suggested
           required: true
