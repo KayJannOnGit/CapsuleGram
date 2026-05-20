@@ -1,4 +1,4 @@
-# Instagram-but-better
+# CapsuleGram
 A feature-rich iOS modification for the Instagram app. This project is a personal fork of RyukGram (which originates from SCInsta), maintained for standalone sideloading and future personal tweaks.
 
 Version: v1.0.0
@@ -113,8 +113,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/i
 1. Download the required iOS SDKs (e.g., iPhoneOS16.2.sdk) and place the folder inside `~/theos/sdks/`.
 2. Clone this repository with all its dependencies:
 ```sh
-   git clone --recurse-submodules [https://github.com/KayJannOnGit/Instagram-but-better](https://github.com/KayJannOnGit/Instagram-but-better)
-   cd Instagram-but-better
+   git clone --recurse-submodules [https://github.com/KayJannOnGit/CapsuleGram](https://github.com/KayJannOnGit/CapsuleGram)
+   cd CapsuleGram
 ```
 
 3. Acquire a decrypted Instagram IPA file from a trusted source (Such as Decrypt Store), rename it exactly to `com.burbn.instagram.ipa`, and place it inside a new folder named `packages` at the root of the project.
