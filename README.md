@@ -1,8 +1,8 @@
 # CapsuleGram
 A feature-rich iOS modification for the Instagram app. This project is a personal fork of RyukGram (which originates from SCInsta), maintained for standalone sideloading and future personal tweaks.
 
-Version: v1.0.0
-Tested Instagram iOS App Version: 429.0.0
+Version: `v1.0.0`
+\ Tested Instagram iOS App Version: `429.0.0`
 
 ---
 
